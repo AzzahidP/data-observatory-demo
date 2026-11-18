@@ -7,12 +7,6 @@ A data story for Imperial's [Data Observatory](https://www.imperial.ac.uk/data-s
 > **40.5% of Tube and DLR journeys start at a station with no step-free route to any platform.**
 > 160 of 300 stations in fare zones 1–6 have none. Of the 140 that do, 39 lose step-free access completely when a single lift fails.
 
-<!-- TODO: full-wall screenshot from /preview, e.g. docs/wall.png -->
-
-![The whole 16 × 4 wall during the step-free split](docs/wall.png)
-
-▶ **[Watch the 2-minute loop](TODO-link-to-recording)** · **[Open the live preview](TODO-hosted-link)**
-
 ---
 
 ## The story
@@ -95,7 +89,7 @@ See [pipeline/README.md](pipeline/README.md) for the full method.
 
 ## Run it
 
-Needs Node ≥ 22.12 and pnpm. <!-- TODO: confirm these exact commands in the fresh-clone test -->
+Needs Node ≥ 22.12 and pnpm.
 
 ```bash
 pnpm install
@@ -146,11 +140,16 @@ Powered by TfL Open Data.
 
 ## How AI was used
 
-<!-- TODO: write this in your own words. Suggested points: -->
-<!-- - which parts Claude helped draft (the brief, code, this README) -->
-<!-- - what you decided yourself (story, data sources, method, design choices) -->
-<!-- - how you checked the output (every number traced to SQL, tests, reading every line) -->
+This project was built entirely with [Claude Code](https://claude.com/claude-code). I did not hand-write the code; I directed it, reviewed it and checked it.
+
+**Setting the rules first.** Before any code, I wrote a brief for Claude Code (drafted with Claude's help) covering the question, the data sources, the wall's constraints and the deadline. It also set how we would work: plan before coding and wait for my approval, work in small steps and explain each change in plain words, ask before installing or deleting anything, never commit, and **never invent a number**. Any figure on the wall had to come out of the pipeline, with `[X]` placeholders until it did. If the brief turned out to be wrong once the real data was in, Claude was to say so rather than work around it quietly, and that happened more than once: the step-free data came from TfL's detailed station zip, not the API I had planned on, and the lift replay shrank from "a week" to the one gap-free day.
+
+**What I decided.** The question and the story, the choice of datasets, collecting the lift-outage data myself over nine days, the scope (Tube + DLR, zones 1–6), what counts as "step-free", treating gaps in the feed as unknown, and the design choices on the wall (inner-London framing, colours, text sizes, the 2-minute loop). Claude Code proposed options and implemented them; I chose between them.
+
+**What Claude Code did.** It read the starter repo and explained its architecture back to me, inspected the raw data, and wrote the Python/DuckDB pipeline, its unit tests, the wall app changes (`/preview`, the shared playhead, zones A–D, the lift replay) and drafts of this README.
+
+**How I checked it.** Every number on the wall is stored in `findings.json` next to the SQL that produced it, so each one can be traced and re-run. The outage logic has unit tests. I went through each change in `/preview` and the simulator before accepting it, and I asked for explanations until I could explain every part of the code myself.
 
 ## Credits
 
-Built by TODO-your-name on the [Data Observatory starter playground](https://github.com/dsi-icl/do-starter-playground) by Imperial's Data Science Institute. The starter's original README is kept in [README.starter.md](README.starter.md).
+Built on the [Data Observatory starter playground](https://github.com/dsi-icl/do-starter-playground) by Imperial's Data Science Institute. The starter's original README is kept in [README.starter.md](README.starter.md).

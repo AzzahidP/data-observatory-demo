@@ -34,3 +34,4 @@ pipeline/out/*.duckdb
 # AI Context
 APPLICATION_GUIDE.md
 BRIEF.md
+README.starter.md
