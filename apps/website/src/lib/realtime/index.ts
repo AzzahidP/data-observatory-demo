@@ -7,11 +7,14 @@ export { screenStore } from './stores/screen-store';
 export type {
     BusMessage,
     BusSharedState,
+    BusTimeline,
+    ControlTimelineMessage,
     EngineConnectionState,
     EngineRole,
     EngineStoreState,
     HelloBusMessage,
     MapCity,
     ScreenMapViewMessage,
-    ScreenSegmentSelectionMessage
+    ScreenSegmentSelectionMessage,
+    ScreenTimelineMessage
 } from './types';

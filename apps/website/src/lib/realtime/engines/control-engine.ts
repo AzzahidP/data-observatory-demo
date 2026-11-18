@@ -1,5 +1,6 @@
 import { throttle } from '@tanstack/pacer';
 
+import { parseTimeline, playheadSeconds } from '../../timeline';
 import { loadArcSegmentsDataset } from '../arc-segments';
 import { getCityMapView, isMapCity } from '../map-cities';
 import { controlStore } from '../stores/control-store';
@@ -7,10 +8,12 @@ import type {
     BusMessage,
     ControlSliderMessage,
     ControlStoreState,
+    ControlTimelineMessage,
     HelloBusMessage,
     MapCity,
     ScreenMapViewMessage,
-    ScreenSegmentSelectionMessage
+    ScreenSegmentSelectionMessage,
+    ScreenTimelineMessage
 } from '../types';
 import { BusEngine } from './bus-engine';
 
@@ -72,6 +75,30 @@ export class ControlEngine extends BusEngine<ControlStoreState> {
         }
 
         return globalWithControlEngine.__controlEngineInstance;
+    }
+
+    // ---- autoplay loop (BRIEF.md section 6, "Should": play/pause, jump to scene)
+
+    /** Ask the bus to play, pause, restart, or jump to `t` seconds into the loop. */
+    timelineAction(action: ControlTimelineMessage['action'], t?: number) {
+        // Nothing is changed locally: the bus owns the playhead and answers with
+        // `screen/timeline`, which every page (this one included) applies the same way.
+        this.send({ type: 'control/timeline', action, t, peerId: this.getPeerId() ?? undefined });
+    }
+
+    /** Seconds into the loop as the bus sees it, or null before hello. Browser-only. */
+    getLoopSeconds(): number | null {
+        const { startedAt, pausedAt, clockOffsetMs } = this.store.state.timeline;
+        if (startedAt === null) return null;
+        return playheadSeconds(Date.now() + clockOffsetMs, { startedAt, pausedAt });
+    }
+
+    private applyTimeline(timeline: unknown, serverNow: unknown) {
+        const parsed = parseTimeline(timeline);
+        if (!parsed) return;
+        if (typeof serverNow !== 'number' || !Number.isFinite(serverNow)) return;
+        const clockOffsetMs = serverNow - Date.now();
+        this.store.setState((prev) => ({ ...prev, timeline: { ...parsed, clockOffsetMs } }));
     }
 
     setSliderInteracting(isSliderInteracting: boolean) {
@@ -147,6 +174,12 @@ export class ControlEngine extends BusEngine<ControlStoreState> {
     }
 
     protected override onMessage(message: BusMessage) {
+        if (message.type === 'screen/timeline') {
+            const timelineMessage = message as ScreenTimelineMessage;
+            this.applyTimeline(timelineMessage.timeline, timelineMessage.serverNow);
+            return;
+        }
+
         if (message.type === 'control/slider') {
             const sliderMessage = message as ControlSliderMessage;
             if (typeof sliderMessage.value !== 'number') return;
@@ -212,6 +245,7 @@ export class ControlEngine extends BusEngine<ControlStoreState> {
     protected override onHello(hello: HelloBusMessage) {
         const state = hello.state;
         if (!state) return;
+        this.applyTimeline(state.timeline, hello.serverNow);
 
         // Rehydrate control UI from bus snapshot so newly opened tablets are immediately in sync.
         this.store.setState((prev) => {

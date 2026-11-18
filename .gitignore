@@ -26,3 +26,11 @@ dist-ssr
 # Dependency directories and files
 node_modules
 .vite*/
+# Pipeline (Python venv, cache, local database)
+pipeline/.venv/
+__pycache__/
+pipeline/out/*.duckdb
+
+# AI Context
+APPLICATION_GUIDE.md
+BRIEF.md

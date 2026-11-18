@@ -10,6 +10,7 @@ import { createFileRoute } from '@tanstack/react-router';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 import { useTheme } from '../lib/theme-provider';
+import { WALLS, wallTiles } from '../lib/wall';
 
 type WallScreen = {
     // Logical wall coordinates.
@@ -26,15 +27,10 @@ function HomePage() {
     const { theme, setTheme } = useTheme();
     const isDark = theme === 'dark';
 
-    const wallScreens = useMemo<WallScreen[]>(() => {
-        // Build a 3x2 wall coordinate system.
-        // These coordinates map directly to `/screen?c=<col>&r=<row>`.
-        return Array.from({ length: 6 }, (_, index) => {
-            const c = index % 3;
-            const r = Math.floor(index / 3);
-            return { c, r, id: `${r}-${c}` };
-        });
-    }, []);
+    // The simulator always shows the small dev wall; the full 16 x 4 wall is `/preview`.
+    // These coordinates map directly to `/screen?c=<col>&r=<row>`.
+    const wall = WALLS.sim;
+    const wallScreens = useMemo<WallScreen[]>(() => wallTiles(wall), [wall]);
 
     const [disconnectedById, setDisconnectedById] = useState<Record<string, boolean>>({});
     const [refreshNonceById, setRefreshNonceById] = useState<Record<string, number>>({});
@@ -69,7 +65,9 @@ function HomePage() {
         const nonce = refreshNonceById[screen.id] ?? 0;
         const disconnected = disconnectedById[screen.id] ?? false;
 
-        return disconnected ? `/noop?v=${nonce}` : `/screen?c=${screen.c}&r=${screen.r}&v=${nonce}`;
+        return disconnected
+            ? `/noop?v=${nonce}`
+            : `/screen?c=${screen.c}&r=${screen.r}&wall=${wall.id}&v=${nonce}`;
     };
 
     const toggleControlDisconnect = (id: string) => {
@@ -117,7 +115,8 @@ function HomePage() {
             <section className="flex min-h-0 flex-col rounded-xl border border-[var(--border)] bg-[var(--muted)] p-3">
                 <div className="mb-2 flex items-center justify-between">
                     <h2 className="text-sm font-medium text-[var(--foreground)]">
-                        Mini-DO (2 x 3) · 1920x1080 per unit
+                        Mini-DO ({wall.cols} x {wall.rows}) · {wall.screenWidth}x{wall.screenHeight}{' '}
+                        per unit
                     </h2>
                     <span className="rounded-full bg-[var(--primary)] px-2 py-1 text-[10px] font-medium text-[var(--primary-foreground)]">
                         /screen
@@ -125,19 +124,33 @@ function HomePage() {
                 </div>
 
                 <div className="bg-back m-auto flex h-fit items-start justify-center overflow-hidden">
-                    <div className="bg-back aspect-[8/3] h-full max-h-full w-full shadow-lg">
+                    <div
+                        className="bg-back h-full max-h-full w-full shadow-lg"
+                        // Whole-wall aspect ratio, e.g. 3 x 1920 : 2 x 1080 = 8:3 for the sim.
+                        style={{
+                            aspectRatio: `${wall.cols * wall.screenWidth} / ${wall.rows * wall.screenHeight}`
+                        }}
+                    >
                         {/*
                           Simulator wall:
                           - each iframe acts as one physical display node
                           - controls let developers test reconnect/refresh behavior quickly
                           - opening any screen in a new tab simulates standalone deployment
                         */}
-                        <div className="grid h-full w-full grid-cols-3 grid-rows-2 gap-0">
+                        <div
+                            className="grid h-full w-full gap-0"
+                            style={{
+                                gridTemplateColumns: `repeat(${wall.cols}, minmax(0, 1fr))`,
+                                gridTemplateRows: `repeat(${wall.rows}, minmax(0, 1fr))`
+                            }}
+                        >
                             {wallScreens.map((screen) => (
                                 <MiniWallScreen
                                     key={screen.id}
                                     c={screen.c}
                                     r={screen.r}
+                                    screenWidth={wall.screenWidth}
+                                    screenHeight={wall.screenHeight}
                                     src={buildScreenSrc(screen)}
                                     disconnected={disconnectedById[screen.id] ?? false}
                                     onToggleDisconnect={() => toggleDisconnect(screen.id)}
@@ -234,6 +247,8 @@ function HomePage() {
 type MiniWallScreenProps = {
     c: number;
     r: number;
+    screenWidth: number;
+    screenHeight: number;
     src: string;
     disconnected: boolean;
     onToggleDisconnect: () => void;
@@ -243,6 +258,8 @@ type MiniWallScreenProps = {
 function MiniWallScreen({
     c,
     r,
+    screenWidth,
+    screenHeight,
     src,
     disconnected,
     onToggleDisconnect,
@@ -259,7 +276,7 @@ function MiniWallScreen({
             // Render the screen at native 1920x1080 and scale via CSS transform.
             // This preserves the same viewport math as production displays while still fitting
             // in the simulator grid.
-            setScale(node.clientWidth / 1920);
+            setScale(node.clientWidth / screenWidth);
         };
 
         updateScale();
@@ -268,7 +285,7 @@ function MiniWallScreen({
         observer.observe(node);
 
         return () => observer.disconnect();
-    }, []);
+    }, [screenWidth]);
 
     return (
         <div
@@ -279,8 +296,13 @@ function MiniWallScreen({
                 src={src}
                 title={`Wall screen c${c} r${r}`}
                 scrolling="no"
-                className="pointer-events-none h-[1080px] w-[1920px] origin-top-left"
-                style={{ transform: `scale(${scale})` }}
+                className="pointer-events-none origin-top-left"
+                // Native screen size, scaled down to fit the simulator cell.
+                style={{
+                    width: screenWidth,
+                    height: screenHeight,
+                    transform: `scale(${scale})`
+                }}
             />
 
             <div className="absolute top-1.5 right-1.5 flex gap-1 opacity-0 transition-opacity group-hover:opacity-100">

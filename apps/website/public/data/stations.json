@@ -1,0 +1,3005 @@
+{
+    "version": 1,
+    "stations": [
+        {
+            "id": "HUBWAT",
+            "name": "Waterloo",
+            "lon": -0.11342,
+            "lat": 51.50332,
+            "entries": 37990742,
+            "stepFree": 1,
+            "lifts": 4,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBKGX",
+            "name": "King's Cross St Pancras",
+            "lon": -0.12427,
+            "lat": 51.53104,
+            "entries": 37173196,
+            "stepFree": 2,
+            "lifts": 14,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBTCR",
+            "name": "Tottenham Court Road",
+            "lon": -0.13104,
+            "lat": 51.51604,
+            "entries": 30586734,
+            "stepFree": 2,
+            "lifts": 9,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBLST",
+            "name": "Liverpool Street",
+            "lon": -0.08201,
+            "lat": 51.51771,
+            "entries": 29900771,
+            "stepFree": 1,
+            "lifts": 4,
+            "oneLift": 1
+        },
+        {
+            "id": "HUBVIC",
+            "name": "Victoria",
+            "lon": -0.14351,
+            "lat": 51.49598,
+            "entries": 29337286,
+            "stepFree": 2,
+            "lifts": 6,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBPAD",
+            "name": "Paddington",
+            "lon": -0.17664,
+            "lat": 51.5167,
+            "entries": 29054443,
+            "stepFree": 1,
+            "lifts": 10,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBLBG",
+            "name": "London Bridge",
+            "lon": -0.08721,
+            "lat": 51.5054,
+            "entries": 28750907,
+            "stepFree": 2,
+            "lifts": 5,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBSRA",
+            "name": "Stratford",
+            "lon": -0.00329,
+            "lat": 51.54182,
+            "entries": 26492682,
+            "stepFree": 2,
+            "lifts": 17,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUOXC",
+            "name": "Oxford Circus",
+            "lon": -0.14187,
+            "lat": 51.51532,
+            "entries": 24472543,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBZFD",
+            "name": "Farringdon",
+            "lon": -0.10453,
+            "lat": 51.52033,
+            "entries": 21428586,
+            "stepFree": 2,
+            "lifts": 8,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBCAW",
+            "name": "Canary Wharf",
+            "lon": -0.0194,
+            "lat": 51.50489,
+            "entries": 21251656,
+            "stepFree": 2,
+            "lifts": 10,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBBDS",
+            "name": "Bond Street",
+            "lon": -0.14857,
+            "lat": 51.51406,
+            "entries": 20775845,
+            "stepFree": 2,
+            "lifts": 6,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUMMT",
+            "name": "Monument",
+            "lon": -0.08811,
+            "lat": 51.51221,
+            "entries": 20323053,
+            "stepFree": 1,
+            "lifts": 10,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBEUS",
+            "name": "Euston",
+            "lon": -0.13348,
+            "lat": 51.52799,
+            "entries": 16430864,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBHMS",
+            "name": "Hammersmith",
+            "lon": -0.22415,
+            "lat": 51.4928,
+            "entries": 15444422,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLULSQ",
+            "name": "Leicester Square",
+            "lon": -0.12818,
+            "lat": 51.51158,
+            "entries": 13895836,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUGPK",
+            "name": "Green Park",
+            "lon": -0.14239,
+            "lat": 51.50664,
+            "entries": 13783248,
+            "stepFree": 2,
+            "lifts": 5,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUSKS",
+            "name": "South Kensington",
+            "lon": -0.17364,
+            "lat": 51.49423,
+            "entries": 13550973,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBZMG",
+            "name": "Moorgate",
+            "lon": -0.08856,
+            "lat": 51.51838,
+            "entries": 12912698,
+            "stepFree": 2,
+            "lifts": 4,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUPCC",
+            "name": "Piccadilly Circus",
+            "lon": -0.13492,
+            "lat": 51.50987,
+            "entries": 12482387,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBVXH",
+            "name": "Vauxhall",
+            "lon": -0.12365,
+            "lat": 51.48592,
+            "entries": 11385598,
+            "stepFree": 2,
+            "lifts": 6,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLUNGW",
+            "name": "North Greenwich",
+            "lon": 0.00408,
+            "lat": 51.5004,
+            "entries": 11215516,
+            "stepFree": 2,
+            "lifts": 3,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLUBST",
+            "name": "Baker Street",
+            "lon": -0.15721,
+            "lat": 51.52273,
+            "entries": 11073344,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBFPK",
+            "name": "Finsbury Park",
+            "lon": -0.10654,
+            "lat": 51.56462,
+            "entries": 10553034,
+            "stepFree": 2,
+            "lifts": 5,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBBRX",
+            "name": "Brixton",
+            "lon": -0.1145,
+            "lat": 51.46254,
+            "entries": 10177178,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLUHBN",
+            "name": "Holborn",
+            "lon": -0.11978,
+            "lat": 51.51739,
+            "entries": 9227873,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUEMB",
+            "name": "Embankment",
+            "lon": -0.12242,
+            "lat": 51.50708,
+            "entries": 9054470,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBWSM",
+            "name": "Westminster",
+            "lon": -0.1252,
+            "lat": 51.50113,
+            "entries": 8978244,
+            "stepFree": 2,
+            "lifts": 4,
+            "oneLift": 1
+        },
+        {
+            "id": "HUBZWL",
+            "name": "Whitechapel",
+            "lon": -0.05994,
+            "lat": 51.51959,
+            "entries": 8931886,
+            "stepFree": 2,
+            "lifts": 8,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBBKG",
+            "name": "Barking",
+            "lon": 0.0806,
+            "lat": 51.53978,
+            "entries": 8692026,
+            "stepFree": 2,
+            "lifts": 1,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLUCTN",
+            "name": "Camden Town",
+            "lon": -0.14249,
+            "lat": 51.53933,
+            "entries": 8390279,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBEAL",
+            "name": "Ealing Broadway",
+            "lon": -0.30162,
+            "lat": 51.51489,
+            "entries": 8214779,
+            "stepFree": 2,
+            "lifts": 4,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBWIM",
+            "name": "Wimbledon",
+            "lon": -0.20608,
+            "lat": 51.4213,
+            "entries": 8105818,
+            "stepFree": 2,
+            "lifts": 4,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUTWH",
+            "name": "Tower Hill",
+            "lon": -0.07676,
+            "lat": 51.5099,
+            "entries": 7933520,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUWYP",
+            "name": "Wembley Park",
+            "lon": -0.2796,
+            "lat": 51.56342,
+            "entries": 7864010,
+            "stepFree": 2,
+            "lifts": 5,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUECT",
+            "name": "Earl's Court",
+            "lon": -0.19399,
+            "lat": 51.49157,
+            "entries": 7746185,
+            "stepFree": 2,
+            "lifts": 4,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBOLD",
+            "name": "Old Street",
+            "lon": -0.08753,
+            "lat": 51.52567,
+            "entries": 7720800,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBCHX",
+            "name": "Charing Cross",
+            "lon": -0.12595,
+            "lat": 51.50817,
+            "entries": 7325492,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUSSQ",
+            "name": "Sloane Square",
+            "lon": -0.15636,
+            "lat": 51.49234,
+            "entries": 7294088,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBHHY",
+            "name": "Highbury & Islington",
+            "lon": -0.1038,
+            "lat": 51.54646,
+            "entries": 7245529,
+            "stepFree": 0,
+            "lifts": 3,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBTOM",
+            "name": "Tottenham Hale",
+            "lon": -0.06042,
+            "lat": 51.5884,
+            "entries": 7166632,
+            "stepFree": 2,
+            "lifts": 3,
+            "oneLift": 1
+        },
+        {
+            "id": "HUBGNW",
+            "name": "Greenwich",
+            "lon": -0.0147,
+            "lat": 51.4781,
+            "entries": 7102512,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUKNB",
+            "name": "Knightsbridge",
+            "lon": -0.16119,
+            "lat": 51.5012,
+            "entries": 6785455,
+            "stepFree": 2,
+            "lifts": 3,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLUWRR",
+            "name": "Warren Street",
+            "lon": -0.1383,
+            "lat": 51.52441,
+            "entries": 6755751,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBEPH",
+            "name": "Elephant & Castle",
+            "lon": -0.10064,
+            "lat": 51.49524,
+            "entries": 6596754,
+            "stepFree": 1,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBWHC",
+            "name": "Walthamstow Central",
+            "lon": -0.01996,
+            "lat": 51.58296,
+            "entries": 6557402,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBSPB",
+            "name": "Shepherd's Bush",
+            "lon": -0.21805,
+            "lat": 51.50506,
+            "entries": 6413805,
+            "stepFree": 0,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBRMD",
+            "name": "Richmond",
+            "lon": -0.3013,
+            "lat": 51.46323,
+            "entries": 6188241,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUTBY",
+            "name": "Tooting Broadway",
+            "lon": -0.16808,
+            "lat": 51.4278,
+            "entries": 5997706,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBCAN",
+            "name": "Canning Town",
+            "lon": 0.00831,
+            "lat": 51.5141,
+            "entries": 5970181,
+            "stepFree": 2,
+            "lifts": 4,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBSVS",
+            "name": "Seven Sisters",
+            "lon": -0.07373,
+            "lat": 51.58282,
+            "entries": 5942071,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUNHG",
+            "name": "Notting Hill Gate",
+            "lon": -0.19634,
+            "lat": 51.50904,
+            "entries": 5932609,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUESQ",
+            "name": "Euston Square",
+            "lon": -0.13555,
+            "lat": 51.52567,
+            "entries": 5910534,
+            "stepFree": 1,
+            "lifts": 2,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLUGTR",
+            "name": "Gloucester Road",
+            "lon": -0.18302,
+            "lat": 51.4944,
+            "entries": 5893907,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUADE",
+            "name": "Aldgate East",
+            "lon": -0.07114,
+            "lat": 51.51546,
+            "entries": 5889266,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUUPK",
+            "name": "Upton Park",
+            "lon": 0.035,
+            "lat": 51.53532,
+            "entries": 5767090,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUAGL",
+            "name": "Angel",
+            "lon": -0.10595,
+            "lat": 51.53228,
+            "entries": 5660189,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBBFR",
+            "name": "Blackfriars",
+            "lon": -0.10335,
+            "lat": 51.51128,
+            "entries": 5517363,
+            "stepFree": 2,
+            "lifts": 6,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUEHM",
+            "name": "East Ham",
+            "lon": 0.05154,
+            "lat": 51.53924,
+            "entries": 5442485,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUMED",
+            "name": "Mile End",
+            "lon": -0.03355,
+            "lat": 51.52515,
+            "entries": 5421353,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUCGN",
+            "name": "Covent Garden",
+            "lon": -0.12416,
+            "lat": 51.51306,
+            "entries": 5275361,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBBAL",
+            "name": "Balham",
+            "lon": -0.15251,
+            "lat": 51.44337,
+            "entries": 4950453,
+            "stepFree": 0,
+            "lifts": 1,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUHSK",
+            "name": "High Street Kensington",
+            "lon": -0.19262,
+            "lat": 51.50081,
+            "entries": 4891086,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUSJP",
+            "name": "St James's Park",
+            "lon": -0.13417,
+            "lat": 51.49923,
+            "entries": 4849909,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBZCW",
+            "name": "Canada Water",
+            "lon": -0.0497,
+            "lat": 51.49799,
+            "entries": 4814374,
+            "stepFree": 2,
+            "lifts": 3,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLUBLG",
+            "name": "Bethnal Green",
+            "lon": -0.0553,
+            "lat": 51.52735,
+            "entries": 4720888,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBBHO",
+            "name": "Blackhorse Road",
+            "lon": -0.04124,
+            "lat": 51.58685,
+            "entries": 4597040,
+            "stepFree": 0,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZBPSUST",
+            "name": "Battersea Power Station",
+            "lon": -0.14274,
+            "lat": 51.47972,
+            "entries": 4461073,
+            "stepFree": 2,
+            "lifts": 4,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUSPU",
+            "name": "St Paul's",
+            "lon": -0.09796,
+            "lat": 51.5152,
+            "entries": 4383840,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUMBA",
+            "name": "Marble Arch",
+            "lon": -0.15859,
+            "lat": 51.51269,
+            "entries": 4261660,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUMDN",
+            "name": "Morden",
+            "lon": -0.19465,
+            "lat": 51.40225,
+            "entries": 4213078,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUSWK",
+            "name": "Southwark",
+            "lon": -0.10541,
+            "lat": 51.50409,
+            "entries": 4199592,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLUWHP",
+            "name": "West Hampstead",
+            "lon": -0.19069,
+            "lat": 51.54671,
+            "entries": 4177872,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLULYN",
+            "name": "Leyton",
+            "lon": -0.00549,
+            "lat": 51.55667,
+            "entries": 4163084,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBHOH",
+            "name": "Harrow-on-the-Hill",
+            "lon": -0.33689,
+            "lat": 51.57915,
+            "entries": 4139451,
+            "stepFree": 2,
+            "lifts": 4,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLURSQ",
+            "name": "Russell Square",
+            "lon": -0.1245,
+            "lat": 51.52315,
+            "entries": 4117978,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUTMP",
+            "name": "Temple",
+            "lon": -0.11427,
+            "lat": 51.51094,
+            "entries": 4086120,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBMYB",
+            "name": "Marylebone",
+            "lon": -0.16296,
+            "lat": 51.52229,
+            "entries": 4068435,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUWOG",
+            "name": "Wood Green",
+            "lon": -0.10993,
+            "lat": 51.59742,
+            "entries": 4058450,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUWCY",
+            "name": "White City",
+            "lon": -0.22443,
+            "lat": 51.51198,
+            "entries": 3989385,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUCHL",
+            "name": "Chancery Lane",
+            "lon": -0.11174,
+            "lat": 51.51822,
+            "entries": 3933398,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUSKW",
+            "name": "Stockwell",
+            "lon": -0.12272,
+            "lat": 51.47217,
+            "entries": 3847978,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUPCO",
+            "name": "Pimlico",
+            "lon": -0.13359,
+            "lat": 51.48923,
+            "entries": 3840338,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUFYR",
+            "name": "Finchley Road",
+            "lon": -0.18015,
+            "lat": 51.54706,
+            "entries": 3736034,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUTPN",
+            "name": "Turnpike Lane",
+            "lon": -0.103,
+            "lat": 51.59038,
+            "entries": 3699635,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUBMY",
+            "name": "Bermondsey",
+            "lon": -0.06391,
+            "lat": 51.49793,
+            "entries": 3534667,
+            "stepFree": 2,
+            "lifts": 1,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLUCPC",
+            "name": "Clapham Common",
+            "lon": -0.13809,
+            "lat": 51.4618,
+            "entries": 3519645,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUACY",
+            "name": "Archway",
+            "lon": -0.1349,
+            "lat": 51.56517,
+            "entries": 3448958,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUFBY",
+            "name": "Fulham Broadway",
+            "lon": -0.19517,
+            "lat": 51.48021,
+            "entries": 3374922,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLULYS",
+            "name": "Leytonstone",
+            "lon": 0.00822,
+            "lat": 51.56836,
+            "entries": 3301901,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUTBC",
+            "name": "Tooting Bec",
+            "lon": -0.15942,
+            "lat": 51.43563,
+            "entries": 3221403,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBLEW",
+            "name": "Lewisham",
+            "lon": -0.01289,
+            "lat": 51.46476,
+            "entries": 3216795,
+            "stepFree": 2,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBKTN",
+            "name": "Kentish Town",
+            "lon": -0.14037,
+            "lat": 51.55052,
+            "entries": 3192474,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLULAD",
+            "name": "Ladbroke Grove",
+            "lon": -0.21041,
+            "lat": 51.51736,
+            "entries": 3168593,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUALD",
+            "name": "Aldgate",
+            "lon": -0.07552,
+            "lat": 51.51412,
+            "entries": 3148979,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUERC",
+            "name": "Edgware Road",
+            "lon": -0.16737,
+            "lat": 51.52001,
+            "entries": 3078196,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUSJW",
+            "name": "St John's Wood",
+            "lon": -0.17409,
+            "lat": 51.53467,
+            "entries": 3050966,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUCPS",
+            "name": "Clapham South",
+            "lon": -0.14774,
+            "lat": 51.4528,
+            "entries": 3049731,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUGGN",
+            "name": "Golders Green",
+            "lon": -0.19406,
+            "lat": 51.57214,
+            "entries": 2951748,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBH13",
+            "name": "Heathrow Terminals 2 & 3",
+            "lon": -0.45324,
+            "lat": 51.47134,
+            "entries": 2932737,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 1
+        },
+        {
+            "id": "HUBLHS",
+            "name": "Limehouse",
+            "lon": -0.03985,
+            "lat": 51.51248,
+            "entries": 2908962,
+            "stepFree": 2,
+            "lifts": 5,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUNAN",
+            "name": "North Acton",
+            "lon": -0.25941,
+            "lat": 51.52337,
+            "entries": 2872113,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUEPY",
+            "name": "East Putney",
+            "lon": -0.21075,
+            "lat": 51.45957,
+            "entries": 2870669,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBWWA",
+            "name": "Woolwich Arsenal",
+            "lon": 0.06902,
+            "lat": 51.49011,
+            "entries": 2839951,
+            "stepFree": 2,
+            "lifts": 3,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUGPS",
+            "name": "Great Portland Street",
+            "lon": -0.1438,
+            "lat": 51.52379,
+            "entries": 2818102,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUCND",
+            "name": "Colindale",
+            "lon": -0.24986,
+            "lat": 51.59541,
+            "entries": 2784844,
+            "stepFree": 2,
+            "lifts": 1,
+            "oneLift": 1
+        },
+        {
+            "id": "HUBHRW",
+            "name": "Harrow & Wealdstone",
+            "lon": -0.33488,
+            "lat": 51.59224,
+            "entries": 2758757,
+            "stepFree": 2,
+            "lifts": 4,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUPSG",
+            "name": "Parsons Green",
+            "lon": -0.20116,
+            "lat": 51.47525,
+            "entries": 2739177,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUQWY",
+            "name": "Queensway",
+            "lon": -0.18718,
+            "lat": 51.51036,
+            "entries": 2734263,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUWIG",
+            "name": "Willesden Green",
+            "lon": -0.22158,
+            "lat": 51.54923,
+            "entries": 2724760,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUBSC",
+            "name": "Barons Court",
+            "lon": -0.21376,
+            "lat": 51.49038,
+            "entries": 2718487,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUSWC",
+            "name": "Swiss Cottage",
+            "lon": -0.17487,
+            "lat": 51.54344,
+            "entries": 2717683,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUMRH",
+            "name": "Manor House",
+            "lon": -0.09589,
+            "lat": 51.57075,
+            "entries": 2688995,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBSDE",
+            "name": "Shadwell",
+            "lon": -0.0564,
+            "lat": 51.51143,
+            "entries": 2683370,
+            "stepFree": 2,
+            "lifts": 1,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLUEFY",
+            "name": "East Finchley",
+            "lon": -0.16464,
+            "lat": 51.58704,
+            "entries": 2678114,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUCSD",
+            "name": "Colliers Wood",
+            "lon": -0.17801,
+            "lat": 51.41816,
+            "entries": 2677472,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBWEH",
+            "name": "West Ham",
+            "lon": 0.00489,
+            "lat": 51.52804,
+            "entries": 2647191,
+            "stepFree": 2,
+            "lifts": 5,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUBBN",
+            "name": "Barbican",
+            "lon": -0.09838,
+            "lat": 51.52005,
+            "entries": 2635478,
+            "stepFree": 1,
+            "lifts": 2,
+            "oneLift": 1
+        },
+        {
+            "id": "HUBWBP",
+            "name": "West Brompton",
+            "lon": -0.19532,
+            "lat": 51.48715,
+            "entries": 2617422,
+            "stepFree": 1,
+            "lifts": 2,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLUHCL",
+            "name": "Hendon Central",
+            "lon": -0.22662,
+            "lat": 51.58322,
+            "entries": 2583881,
+            "stepFree": 2,
+            "lifts": 1,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLUKBN",
+            "name": "Kilburn",
+            "lon": -0.20437,
+            "lat": 51.54697,
+            "entries": 2577013,
+            "stepFree": 2,
+            "lifts": 1,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLUWLA",
+            "name": "Wood Lane",
+            "lon": -0.22428,
+            "lat": 51.5098,
+            "entries": 2546808,
+            "stepFree": 2,
+            "lifts": 4,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUBZP",
+            "name": "Belsize Park",
+            "lon": -0.16463,
+            "lat": 51.55042,
+            "entries": 2542289,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUSFS",
+            "name": "Southfields",
+            "lon": -0.20658,
+            "lat": 51.44509,
+            "entries": 2538205,
+            "stepFree": 2,
+            "lifts": 1,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLUCFM",
+            "name": "Chalk Farm",
+            "lon": -0.15365,
+            "lat": 51.54417,
+            "entries": 2531800,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUSGN",
+            "name": "Stepney Green",
+            "lon": -0.04679,
+            "lat": 51.52188,
+            "entries": 2523600,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUUXB",
+            "name": "Uxbridge",
+            "lon": -0.47847,
+            "lat": 51.54665,
+            "entries": 2500926,
+            "stepFree": 2,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUOVL",
+            "name": "Oval",
+            "lon": -0.11254,
+            "lat": 51.48198,
+            "entries": 2500463,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUGDG",
+            "name": "Goodge Street",
+            "lon": -0.13448,
+            "lat": 51.52063,
+            "entries": 2429444,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUFYC",
+            "name": "Finchley Central",
+            "lon": -0.19273,
+            "lat": 51.6013,
+            "entries": 2426799,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUTNG",
+            "name": "Turnham Green",
+            "lon": -0.2547,
+            "lat": 51.49525,
+            "entries": 2416526,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUDGY",
+            "name": "Dagenham Heathway",
+            "lon": 0.14722,
+            "lat": 51.54168,
+            "entries": 2394651,
+            "stepFree": 2,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBQPW",
+            "name": "Queen's Park",
+            "lon": -0.20497,
+            "lat": 51.53396,
+            "entries": 2392019,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUPLW",
+            "name": "Plaistow",
+            "lon": 0.01731,
+            "lat": 51.53138,
+            "entries": 2381825,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBUPM",
+            "name": "Upminster",
+            "lon": 0.25128,
+            "lat": 51.55899,
+            "entries": 2365090,
+            "stepFree": 2,
+            "lifts": 3,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUGTH",
+            "name": "Gants Hill",
+            "lon": 0.06615,
+            "lat": 51.57671,
+            "entries": 2358706,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBWMB",
+            "name": "Wembley Central",
+            "lon": -0.29635,
+            "lat": 51.55199,
+            "entries": 2344679,
+            "stepFree": 2,
+            "lifts": 4,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBCST",
+            "name": "Cannon Street",
+            "lon": -0.09046,
+            "lat": 51.5113,
+            "entries": 2333107,
+            "stepFree": 1,
+            "lifts": 2,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLUHWY",
+            "name": "Holloway Road",
+            "lon": -0.11291,
+            "lat": 51.55274,
+            "entries": 2319598,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBCUS",
+            "name": "Custom House for ExCel",
+            "lon": 0.02672,
+            "lat": 51.50969,
+            "entries": 2296474,
+            "stepFree": 2,
+            "lifts": 4,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLUKNG",
+            "name": "Kennington",
+            "lon": -0.10576,
+            "lat": 51.4883,
+            "entries": 2296372,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUCPN",
+            "name": "Clapham North",
+            "lon": -0.12979,
+            "lat": 51.46516,
+            "entries": 2289885,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUACT",
+            "name": "Acton Town",
+            "lon": -0.28021,
+            "lat": 51.50297,
+            "entries": 2282864,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBWIJ",
+            "name": "Willesden Junction",
+            "lon": -0.24363,
+            "lat": 51.53232,
+            "entries": 2258589,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLUWOF",
+            "name": "Woodford",
+            "lon": 0.03426,
+            "lat": 51.60731,
+            "entries": 2227920,
+            "stepFree": 2,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUHGT",
+            "name": "Highgate",
+            "lon": -0.14596,
+            "lat": 51.57758,
+            "entries": 2218794,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLHEQ",
+            "name": "Heron Quays",
+            "lon": -0.02134,
+            "lat": 51.50319,
+            "entries": 2209493,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUPYB",
+            "name": "Putney Bridge",
+            "lon": -0.20923,
+            "lat": 51.46819,
+            "entries": 2149153,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBHX5",
+            "name": "Heathrow Terminal 5",
+            "lon": -0.48777,
+            "lat": 51.47188,
+            "entries": 2130109,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUMSH",
+            "name": "Mansion House",
+            "lon": -0.09432,
+            "lat": 51.51217,
+            "entries": 2111051,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUNHT",
+            "name": "Northolt",
+            "lon": -0.36847,
+            "lat": 51.54827,
+            "entries": 2076982,
+            "stepFree": 2,
+            "lifts": 1,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLUEGW",
+            "name": "Edgware",
+            "lon": -0.27538,
+            "lat": 51.61366,
+            "entries": 2067969,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUBWR",
+            "name": "Bow Road",
+            "lon": -0.02499,
+            "lat": 51.52701,
+            "entries": 2052757,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUCAR",
+            "name": "Caledonian Road",
+            "lon": -0.11825,
+            "lat": 51.54863,
+            "entries": 2045146,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZNEUGST",
+            "name": "Nine Elms",
+            "lon": -0.12852,
+            "lat": 51.47983,
+            "entries": 2039794,
+            "stepFree": 2,
+            "lifts": 1,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLUWSP",
+            "name": "Westbourne Park",
+            "lon": -0.20108,
+            "lat": 51.521,
+            "entries": 2036780,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUBDS",
+            "name": "Bounds Green",
+            "lon": -0.12445,
+            "lat": 51.6071,
+            "entries": 2012492,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBGUN",
+            "name": "Gunnersbury",
+            "lon": -0.27514,
+            "lat": 51.49166,
+            "entries": 2003684,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLWFE",
+            "name": "Westferry",
+            "lon": -0.02637,
+            "lat": 51.50922,
+            "entries": 2003468,
+            "stepFree": 2,
+            "lifts": 4,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUBWT",
+            "name": "Bayswater",
+            "lon": -0.18776,
+            "lat": 51.51239,
+            "entries": 1969259,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLEIN",
+            "name": "East India",
+            "lon": -0.00214,
+            "lat": 51.50951,
+            "entries": 1965117,
+            "stepFree": 2,
+            "lifts": 3,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLSIT",
+            "name": "Stratford International",
+            "lon": -0.00915,
+            "lat": 51.54572,
+            "entries": 1963753,
+            "stepFree": 2,
+            "lifts": 3,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUHTD",
+            "name": "Hampstead",
+            "lon": -0.17825,
+            "lat": 51.55664,
+            "entries": 1939898,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUSWF",
+            "name": "South Woodford",
+            "lon": 0.02759,
+            "lat": 51.59187,
+            "entries": 1930143,
+            "stepFree": 2,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUBBB",
+            "name": "Bromley-by-Bow",
+            "lon": -0.01157,
+            "lat": 51.52452,
+            "entries": 1926957,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUWKN",
+            "name": "West Kensington",
+            "lon": -0.20661,
+            "lat": 51.49054,
+            "entries": 1919404,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUBOR",
+            "name": "Borough",
+            "lon": -0.09328,
+            "lat": 51.501,
+            "entries": 1904122,
+            "stepFree": 1,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLSOQ",
+            "name": "South Quay",
+            "lon": -0.0162,
+            "lat": 51.50006,
+            "entries": 1903384,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUSWN",
+            "name": "South Wimbledon",
+            "lon": -0.19222,
+            "lat": 51.41533,
+            "entries": 1842838,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUSGT",
+            "name": "Southgate",
+            "lon": -0.12791,
+            "lat": 51.63232,
+            "entries": 1811535,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUHBT",
+            "name": "High Barnet",
+            "lon": -0.19447,
+            "lat": 51.65049,
+            "entries": 1795456,
+            "stepFree": 2,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBKWG",
+            "name": "Kew Gardens",
+            "lon": -0.28527,
+            "lat": 51.4771,
+            "entries": 1768750,
+            "stepFree": 2,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUERB",
+            "name": "Edgware Road",
+            "lon": -0.17002,
+            "lat": 51.52039,
+            "entries": 1728130,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUSBM",
+            "name": "Shepherd's Bush Market",
+            "lon": -0.22638,
+            "lat": 51.5058,
+            "entries": 1724794,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUKBY",
+            "name": "Kingsbury",
+            "lon": -0.27874,
+            "lat": 51.58495,
+            "entries": 1704191,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLLDP",
+            "name": "Langdon Park",
+            "lon": -0.01426,
+            "lat": 51.51507,
+            "entries": 1700406,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUWOP",
+            "name": "Woodside Park",
+            "lon": -0.18543,
+            "lat": 51.61791,
+            "entries": 1683329,
+            "stepFree": 2,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUEAN",
+            "name": "East Acton",
+            "lon": -0.24756,
+            "lat": 51.51666,
+            "entries": 1660165,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUEPG",
+            "name": "Epping",
+            "lon": 0.11383,
+            "lat": 51.69366,
+            "entries": 1643161,
+            "stepFree": 2,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUTFP",
+            "name": "Tufnell Park",
+            "lon": -0.13795,
+            "lat": 51.55673,
+            "entries": 1619132,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLBOW",
+            "name": "Bow Church",
+            "lon": -0.02087,
+            "lat": 51.52775,
+            "entries": 1613681,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLURYL",
+            "name": "Rayners Lane",
+            "lon": -0.37102,
+            "lat": 51.57512,
+            "entries": 1597625,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBLCY",
+            "name": "London City Airport",
+            "lon": 0.0494,
+            "lat": 51.50329,
+            "entries": 1592311,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUASG",
+            "name": "Arnos Grove",
+            "lon": -0.13341,
+            "lat": 51.61623,
+            "entries": 1575068,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUDOH",
+            "name": "Dollis Hill",
+            "lon": -0.23888,
+            "lat": 51.55211,
+            "entries": 1573175,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUSTM",
+            "name": "Stanmore",
+            "lon": -0.30304,
+            "lat": 51.6196,
+            "entries": 1568850,
+            "stepFree": 2,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUNBP",
+            "name": "Newbury Park",
+            "lon": 0.09012,
+            "lat": 51.57546,
+            "entries": 1562368,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBGFD",
+            "name": "Greenford",
+            "lon": -0.34567,
+            "lat": 51.5424,
+            "entries": 1552288,
+            "stepFree": 2,
+            "lifts": 1,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLUBTK",
+            "name": "Burnt Oak",
+            "lon": -0.264,
+            "lat": 51.60272,
+            "entries": 1550487,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUHPC",
+            "name": "Hyde Park Corner",
+            "lon": -0.15241,
+            "lat": 51.50302,
+            "entries": 1547662,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUHWC",
+            "name": "Hounslow Central",
+            "lon": -0.36666,
+            "lat": 51.47125,
+            "entries": 1540541,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUNKP",
+            "name": "Northwick Park",
+            "lon": -0.318,
+            "lat": 51.57856,
+            "entries": 1535269,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUHWE",
+            "name": "Hounslow East",
+            "lon": -0.35647,
+            "lat": 51.47333,
+            "entries": 1525553,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUWKA",
+            "name": "Warwick Avenue",
+            "lon": -0.18358,
+            "lat": 51.52321,
+            "entries": 1505947,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLCLA",
+            "name": "Crossharbour",
+            "lon": -0.01442,
+            "lat": 51.49565,
+            "entries": 1493221,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUBEC",
+            "name": "Becontree",
+            "lon": 0.12727,
+            "lat": 51.54029,
+            "entries": 1479780,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUMTC",
+            "name": "Mornington Crescent",
+            "lon": -0.13844,
+            "lat": 51.53437,
+            "entries": 1473460,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUHPK",
+            "name": "Holland Park",
+            "lon": -0.20551,
+            "lat": 51.50726,
+            "entries": 1450099,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUQBY",
+            "name": "Queensbury",
+            "lon": -0.28578,
+            "lat": 51.5942,
+            "entries": 1446558,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUHLT",
+            "name": "Hainault",
+            "lon": 0.09353,
+            "lat": 51.60379,
+            "entries": 1443723,
+            "stepFree": 2,
+            "lifts": 3,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLULGT",
+            "name": "Lancaster Gate",
+            "lon": -0.17515,
+            "lat": 51.51178,
+            "entries": 1439312,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUDGE",
+            "name": "Dagenham East",
+            "lon": 0.16583,
+            "lat": 51.54415,
+            "entries": 1421698,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUHNX",
+            "name": "Hatton Cross",
+            "lon": -0.42322,
+            "lat": 51.46676,
+            "entries": 1404366,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLDEP",
+            "name": "Deptford Bridge",
+            "lon": -0.02268,
+            "lat": 51.4745,
+            "entries": 1364319,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUHGR",
+            "name": "Hanger Lane",
+            "lon": -0.29272,
+            "lat": 51.52979,
+            "entries": 1362956,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUMVL",
+            "name": "Maida Vale",
+            "lon": -0.18573,
+            "lat": 51.52975,
+            "entries": 1362103,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUEPK",
+            "name": "Elm Park",
+            "lon": 0.19854,
+            "lat": 51.54979,
+            "entries": 1360784,
+            "stepFree": 2,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUHWT",
+            "name": "Hounslow West",
+            "lon": -0.3858,
+            "lat": 51.47335,
+            "entries": 1357644,
+            "stepFree": 2,
+            "lifts": 1,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLURVP",
+            "name": "Ravenscourt Park",
+            "lon": -0.23592,
+            "lat": 51.49423,
+            "entries": 1352094,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLULBN",
+            "name": "Lambeth North",
+            "lon": -0.11188,
+            "lat": 51.49876,
+            "entries": 1340791,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLULGN",
+            "name": "Loughton",
+            "lon": 0.05539,
+            "lat": 51.64147,
+            "entries": 1322769,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUNDN",
+            "name": "Neasden",
+            "lon": -0.24996,
+            "lat": 51.55408,
+            "entries": 1306385,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUKPK",
+            "name": "Kilburn Park",
+            "lon": -0.19395,
+            "lat": 51.53507,
+            "entries": 1291898,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLPUD",
+            "name": "Pudding Mill Lane",
+            "lon": -0.01317,
+            "lat": 51.53402,
+            "entries": 1262866,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLISL",
+            "name": "Island Gardens",
+            "lon": -0.01034,
+            "lat": 51.48792,
+            "entries": 1251254,
+            "stepFree": 2,
+            "lifts": 1,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZDLWIQ",
+            "name": "West India Quay",
+            "lon": -0.02043,
+            "lat": 51.5071,
+            "entries": 1248081,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUPNR",
+            "name": "Pinner",
+            "lon": -0.38104,
+            "lat": 51.59262,
+            "entries": 1236317,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBHDN",
+            "name": "Harlesden",
+            "lon": -0.25754,
+            "lat": 51.53621,
+            "entries": 1233226,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBSBP",
+            "name": "Stonebridge Park",
+            "lon": -0.27565,
+            "lat": 51.54391,
+            "entries": 1229531,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBTOG",
+            "name": "Tower Gateway",
+            "lon": -0.07424,
+            "lat": 51.51053,
+            "entries": 1228979,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLPDK",
+            "name": "Pontoon Dock",
+            "lon": 0.03336,
+            "lat": 51.50235,
+            "entries": 1228587,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUPRD",
+            "name": "Preston Road",
+            "lon": -0.29507,
+            "lat": 51.57203,
+            "entries": 1158601,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLRVC",
+            "name": "Royal Victoria",
+            "lon": 0.01845,
+            "lat": 51.50919,
+            "entries": 1145857,
+            "stepFree": 2,
+            "lifts": 3,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLDEV",
+            "name": "Devons Road",
+            "lon": -0.01743,
+            "lat": 51.52263,
+            "entries": 1140185,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUNFD",
+            "name": "Northfields",
+            "lon": -0.31438,
+            "lat": 51.49937,
+            "entries": 1135121,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUSFB",
+            "name": "Stamford Brook",
+            "lon": -0.24555,
+            "lat": 51.49495,
+            "entries": 1127667,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUUPY",
+            "name": "Upney",
+            "lon": 0.10113,
+            "lat": 51.53834,
+            "entries": 1125226,
+            "stepFree": 2,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLWSV",
+            "name": "West Silvertown",
+            "lon": 0.02284,
+            "lat": 51.50282,
+            "entries": 1115546,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUOAK",
+            "name": "Oakwood",
+            "lon": -0.13201,
+            "lat": 51.64763,
+            "entries": 1101684,
+            "stepFree": 2,
+            "lifts": 1,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLURYO",
+            "name": "Royal Oak",
+            "lon": -0.18864,
+            "lat": 51.51917,
+            "entries": 1094765,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUASL",
+            "name": "Arsenal",
+            "lon": -0.10631,
+            "lat": 51.55844,
+            "entries": 1082342,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLULRD",
+            "name": "Latimer Road",
+            "lon": -0.21772,
+            "lat": 51.51354,
+            "entries": 1079250,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUBKH",
+            "name": "Buckhurst Hill",
+            "lon": 0.04672,
+            "lat": 51.62619,
+            "entries": 1069166,
+            "stepFree": 2,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUNOW",
+            "name": "Northwood",
+            "lon": -0.42377,
+            "lat": 51.61106,
+            "entries": 1060333,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUTAW",
+            "name": "Totteridge & Whetstone",
+            "lon": -0.17896,
+            "lat": 51.63038,
+            "entries": 1056063,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUEAE",
+            "name": "Eastcote",
+            "lon": -0.39707,
+            "lat": 51.5765,
+            "entries": 1049908,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUSEA",
+            "name": "South Ealing",
+            "lon": -0.30709,
+            "lat": 51.50111,
+            "entries": 1046100,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUALP",
+            "name": "Alperton",
+            "lon": -0.29939,
+            "lat": 51.54066,
+            "entries": 1036065,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUCPK",
+            "name": "Canons Park",
+            "lon": -0.2947,
+            "lat": 51.60773,
+            "entries": 1027238,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLURBG",
+            "name": "Redbridge",
+            "lon": 0.04574,
+            "lat": 51.57633,
+            "entries": 1013841,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLURGP",
+            "name": "Regent's Park",
+            "lon": -0.14654,
+            "lat": 51.52337,
+            "entries": 1004811,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUCWP",
+            "name": "Chiswick Park",
+            "lon": -0.26785,
+            "lat": 51.49442,
+            "entries": 984808,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUDBN",
+            "name": "Debden",
+            "lon": 0.08399,
+            "lat": 51.64534,
+            "entries": 956344,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBKNL",
+            "name": "Kensal Green",
+            "lon": -0.22486,
+            "lat": 51.53041,
+            "entries": 947309,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUGHK",
+            "name": "Goldhawk Road",
+            "lon": -0.2268,
+            "lat": 51.50196,
+            "entries": 939668,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUWSD",
+            "name": "Wanstead",
+            "lon": 0.02851,
+            "lat": 51.57553,
+            "entries": 934649,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUBTX",
+            "name": "Brent Cross",
+            "lon": -0.21343,
+            "lat": 51.57673,
+            "entries": 932554,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUSNB",
+            "name": "Snaresbrook",
+            "lon": 0.02156,
+            "lat": 51.58095,
+            "entries": 923912,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUWIP",
+            "name": "Wimbledon Park",
+            "lon": -0.19952,
+            "lat": 51.43449,
+            "entries": 908069,
+            "stepFree": 2,
+            "lifts": 1,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLUSHH",
+            "name": "South Harrow",
+            "lon": -0.35268,
+            "lat": 51.56478,
+            "entries": 882649,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLCYP",
+            "name": "Cyprus",
+            "lon": 0.06403,
+            "lat": 51.50851,
+            "entries": 869348,
+            "stepFree": 2,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUECM",
+            "name": "Ealing Common",
+            "lon": -0.28814,
+            "lat": 51.51022,
+            "entries": 859382,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBKNT",
+            "name": "Kenton",
+            "lon": -0.31699,
+            "lat": 51.58171,
+            "entries": 841251,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUHCH",
+            "name": "Hornchurch",
+            "lon": 0.21897,
+            "lat": 51.55413,
+            "entries": 825242,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLALL",
+            "name": "All Saints",
+            "lon": -0.01309,
+            "lat": 51.51111,
+            "entries": 824002,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBHX4",
+            "name": "Heathrow Terminal 4",
+            "lon": -0.44633,
+            "lat": 51.45905,
+            "entries": 820133,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLUPVL",
+            "name": "Perivale",
+            "lon": -0.3235,
+            "lat": 51.53666,
+            "entries": 808032,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUMHL",
+            "name": "Mill Hill East",
+            "lon": -0.2099,
+            "lat": 51.60827,
+            "entries": 804095,
+            "stepFree": 2,
+            "lifts": 1,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZDLGAL",
+            "name": "Gallions Reach",
+            "lon": 0.072,
+            "lat": 51.50887,
+            "entries": 799586,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLMUD",
+            "name": "Mudchute",
+            "lon": -0.01485,
+            "lat": 51.49102,
+            "entries": 795596,
+            "stepFree": 2,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUOSY",
+            "name": "Osterley",
+            "lon": -0.35183,
+            "lat": 51.48119,
+            "entries": 778327,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLBEC",
+            "name": "Beckton",
+            "lon": 0.0609,
+            "lat": 51.51441,
+            "entries": 776612,
+            "stepFree": 2,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLKGV",
+            "name": "King George V",
+            "lon": 0.06233,
+            "lat": 51.50197,
+            "entries": 756575,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLUNHA",
+            "name": "North Harrow",
+            "lon": -0.3624,
+            "lat": 51.58487,
+            "entries": 753812,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUNWH",
+            "name": "Northwood Hills",
+            "lon": -0.40937,
+            "lat": 51.60061,
+            "entries": 746859,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBSRU",
+            "name": "South Ruislip",
+            "lon": -0.39876,
+            "lat": 51.55695,
+            "entries": 741679,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUSUH",
+            "name": "Sudbury Hill",
+            "lon": -0.33644,
+            "lat": 51.55687,
+            "entries": 721396,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBNWB",
+            "name": "North Wembley",
+            "lon": -0.30417,
+            "lat": 51.56255,
+            "entries": 719436,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLPOP",
+            "name": "Poplar",
+            "lon": -0.01746,
+            "lat": 51.50771,
+            "entries": 708105,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUCKS",
+            "name": "Cockfosters",
+            "lon": -0.14962,
+            "lat": 51.65158,
+            "entries": 704412,
+            "stepFree": 2,
+            "lifts": 1,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLUSUT",
+            "name": "Sudbury Town",
+            "lon": -0.3158,
+            "lat": 51.55064,
+            "entries": 701879,
+            "stepFree": 2,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBWRU",
+            "name": "West Ruislip",
+            "lon": -0.43749,
+            "lat": 51.56966,
+            "entries": 698506,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUWFN",
+            "name": "West Finchley",
+            "lon": -0.18859,
+            "lat": 51.60932,
+            "entries": 689548,
+            "stepFree": 2,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUHGD",
+            "name": "Hillingdon",
+            "lon": -0.44951,
+            "lat": 51.55369,
+            "entries": 686180,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLURSP",
+            "name": "Ruislip",
+            "lon": -0.42145,
+            "lat": 51.57147,
+            "entries": 677285,
+            "stepFree": 1,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLURSM",
+            "name": "Ruislip Manor",
+            "lon": -0.413,
+            "lat": 51.57333,
+            "entries": 668350,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLABR",
+            "name": "Abbey Road",
+            "lon": 0.00377,
+            "lat": 51.53241,
+            "entries": 651712,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUPKR",
+            "name": "Park Royal",
+            "lon": -0.28422,
+            "lat": 51.52695,
+            "entries": 648865,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLSTL",
+            "name": "Star Lane",
+            "lon": 0.00428,
+            "lat": 51.52076,
+            "entries": 635662,
+            "stepFree": 2,
+            "lifts": 3,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZLUBOS",
+            "name": "Boston Manor",
+            "lon": -0.32471,
+            "lat": 51.49573,
+            "entries": 632221,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLELV",
+            "name": "Elverson Road",
+            "lon": -0.0168,
+            "lat": 51.46866,
+            "entries": 631528,
+            "stepFree": 2,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLBLA",
+            "name": "Blackwall",
+            "lon": -0.00678,
+            "lat": 51.50807,
+            "entries": 617334,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLRAL",
+            "name": "Royal Albert",
+            "lon": 0.04603,
+            "lat": 51.50829,
+            "entries": 596260,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUWHW",
+            "name": "West Harrow",
+            "lon": -0.35316,
+            "lat": 51.57987,
+            "entries": 589413,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUBKE",
+            "name": "Barkingside",
+            "lon": 0.08808,
+            "lat": 51.58592,
+            "entries": 563978,
+            "stepFree": 1,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUWTA",
+            "name": "West Acton",
+            "lon": -0.28076,
+            "lat": 51.51796,
+            "entries": 539998,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLPRE",
+            "name": "Prince Regent",
+            "lon": 0.03375,
+            "lat": 51.50935,
+            "entries": 532714,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 1
+        },
+        {
+            "id": "940GZZDLSHS",
+            "name": "Stratford High Street",
+            "lon": -0.00038,
+            "lat": 51.53792,
+            "entries": 523634,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUFLP",
+            "name": "Fairlop",
+            "lon": 0.09093,
+            "lat": 51.59575,
+            "entries": 461837,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "HUBSOK",
+            "name": "South Kenton",
+            "lon": -0.30841,
+            "lat": 51.57046,
+            "entries": 460645,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLURSG",
+            "name": "Ruislip Gardens",
+            "lon": -0.41087,
+            "lat": 51.5606,
+            "entries": 433605,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUUPB",
+            "name": "Upminster Bridge",
+            "lon": 0.23546,
+            "lat": 51.55863,
+            "entries": 414169,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUMPK",
+            "name": "Moor Park",
+            "lon": -0.43223,
+            "lat": 51.62974,
+            "entries": 407241,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUICK",
+            "name": "Ickenham",
+            "lon": -0.44267,
+            "lat": 51.56234,
+            "entries": 404725,
+            "stepFree": 2,
+            "lifts": 2,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUTHB",
+            "name": "Theydon Bois",
+            "lon": 0.10316,
+            "lat": 51.67146,
+            "entries": 357912,
+            "stepFree": 1,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUNEN",
+            "name": "North Ealing",
+            "lon": -0.28919,
+            "lat": 51.51758,
+            "entries": 261639,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZDLBPK",
+            "name": "Beckton Park",
+            "lon": 0.05497,
+            "lat": 51.50898,
+            "entries": 213138,
+            "stepFree": 2,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUGGH",
+            "name": "Grange Hill",
+            "lon": 0.09211,
+            "lat": 51.61336,
+            "entries": 195166,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLUCWL",
+            "name": "Chigwell",
+            "lon": 0.07487,
+            "lat": 51.6178,
+            "entries": 165857,
+            "stepFree": 0,
+            "lifts": 0,
+            "oneLift": 0
+        },
+        {
+            "id": "940GZZLURVY",
+            "name": "Roding Valley",
+            "lon": 0.04373,
+            "lat": 51.61719,
+            "entries": 110442,
+            "stepFree": 2,
+            "lifts": 0,
+            "oneLift": 0
+        }
+    ]
+}

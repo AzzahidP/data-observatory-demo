@@ -1,5 +1,9 @@
+import { loopSeconds, parseTimeline, playheadSeconds } from '../../timeline';
 import { loadArcSegmentsDataset } from '../arc-segments';
+import { loadFindingsDataset, parseFindings } from '../findings';
+import { loadLiftEventsDataset, parseLiftEvents } from '../lift-events';
 import { getCityMapView, isMapCity } from '../map-cities';
+import { loadStationsDataset, parseStations } from '../stations';
 import { screenStore } from '../stores/screen-store';
 import type {
     ArcSegment,
@@ -8,18 +12,62 @@ import type {
     ScreenMapViewMessage,
     ScreenMapViewState,
     ScreenSegmentSelectionMessage,
-    ScreenStoreState
+    ScreenStoreState,
+    ScreenTimelineMessage
 } from '../types';
 import { BusEngine } from './bus-engine';
 
 export class ScreenEngine extends BusEngine<ScreenStoreState> {
     // Guards repeated fetches during retries/rerenders.
     private hasAttemptedArcSegmentLoad = false;
+    // Fallback playhead: when this page started (browser clock). Used until the bus says hello,
+    // or forever if no bus is reachable, so a screen without a server still plays the loop.
+    private readonly localStartedAt: number = typeof window === 'undefined' ? 0 : Date.now();
 
     private constructor() {
         super('screen', screenStore);
-        // Prime dataset early so first render after route mount has data asap.
-        void this.ensureArcSegmentsLoaded();
+        // Prime datasets early so first render after route mount has data asap.
+        void this.ensureStationsLoaded();
+        void this.ensureLiftEventsLoaded();
+        void this.ensureFindingsLoaded();
+    }
+
+    private findingsLoading = false;
+
+    async ensureFindingsLoaded() {
+        if (typeof window === 'undefined') return;
+        if (this.findingsLoading || this.store.state.wallNumbers) return;
+        this.findingsLoading = true;
+        const wallNumbers = parseFindings(await loadFindingsDataset());
+        this.findingsLoading = false;
+        // null (missing/invalid file) leaves panels showing placeholders; a later call retries.
+        if (wallNumbers) this.store.setState((prev) => ({ ...prev, wallNumbers }));
+    }
+
+    /**
+     * Seconds into the autoplay loop right now. Browser-only (uses the clock), so call it
+     * after mount, never during server rendering.
+     */
+    getLoopSeconds() {
+        const { startedAt, pausedAt, clockOffsetMs } = this.store.state.timeline;
+        if (startedAt === null) return loopSeconds(Date.now(), this.localStartedAt);
+        // Convert our clock to the server's clock before comparing with the server's start time.
+        return playheadSeconds(Date.now() + clockOffsetMs, { startedAt, pausedAt });
+    }
+
+    async ensureLiftEventsLoaded() {
+        if (typeof window === 'undefined') return;
+        const status = this.store.state.liftEventsStatus;
+        if (status === 'loading' || status === 'ready') return;
+
+        this.store.setState((prev) => ({ ...prev, liftEventsStatus: 'loading' }));
+        const parsed = parseLiftEvents(await loadLiftEventsDataset());
+        this.store.setState((prev) => ({
+            ...prev,
+            liftWindow: parsed?.window ?? null,
+            liftEvents: parsed?.events ?? [],
+            liftEventsStatus: parsed ? 'ready' : 'error'
+        }));
     }
 
     static getInstance() {
@@ -42,6 +90,22 @@ export class ScreenEngine extends BusEngine<ScreenStoreState> {
                 ...prev.mapView,
                 ...view
             }
+        }));
+    }
+
+    async ensureStationsLoaded() {
+        if (typeof window === 'undefined') return;
+        const status = this.store.state.stationsStatus;
+        if (status === 'loading' || status === 'ready') return;
+
+        this.store.setState((prev) => ({ ...prev, stationsStatus: 'loading' }));
+        const stations = parseStations(await loadStationsDataset());
+        // An empty result means the file was missing or every row failed validation.
+        // 'error' lets a later call (remount / reconnect) try again.
+        this.store.setState((prev) => ({
+            ...prev,
+            stations,
+            stationsStatus: stations.length > 0 ? 'ready' : 'error'
         }));
     }
 
@@ -78,6 +142,12 @@ export class ScreenEngine extends BusEngine<ScreenStoreState> {
     }
 
     protected override onMessage(message: BusMessage) {
+        if (message.type === 'screen/timeline') {
+            const timelineMessage = message as ScreenTimelineMessage;
+            this.applyTimeline(timelineMessage.timeline, timelineMessage.serverNow);
+            return;
+        }
+
         if (message.type === 'screen/map-view') {
             const mapViewMessage = message as ScreenMapViewMessage;
             this.applyMapViewMessage(mapViewMessage);
@@ -100,6 +170,17 @@ export class ScreenEngine extends BusEngine<ScreenStoreState> {
             view: { zoom: hello.state.zoom }
         });
         this.applySegmentSelection(hello.state.selectedSegmentIndexes);
+        this.applyTimeline(hello.state.timeline, hello.serverNow);
+    }
+
+    private applyTimeline(timeline: unknown, serverNow: unknown) {
+        // Untrusted payload: only accept finite numbers.
+        const parsed = parseTimeline(timeline);
+        if (!parsed) return;
+        if (typeof serverNow !== 'number' || !Number.isFinite(serverNow)) return;
+        // Ignores network delay (a few ms on a LAN), far below what a 2-minute loop can show.
+        const clockOffsetMs = serverNow - Date.now();
+        this.store.setState((prev) => ({ ...prev, timeline: { ...parsed, clockOffsetMs } }));
     }
 
     private applyMapViewMessage(mapViewMessage: ScreenMapViewMessage) {

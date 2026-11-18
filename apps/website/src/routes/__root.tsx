@@ -50,7 +50,10 @@ function RootComponent() {
 
 function RootDocument({ children }: { readonly children: React.ReactNode }) {
     return (
-        <html lang="en">
+        // suppressHydrationWarning: the theme script below sets `class="dark"` on <html> before
+        // React hydrates, so this one element's attributes differ from the server HTML on purpose.
+        // It only applies to <html> itself, not to its children.
+        <html lang="en" suppressHydrationWarning>
             <head>
                 <HeadContent />
             </head>
