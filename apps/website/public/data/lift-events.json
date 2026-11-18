@@ -1,6 +1,6 @@
 {
     "version": 1,
-    "window": { "start": "2026-11-11T00:01:03Z", "end": "2026-11-11T23:56:03Z", "seconds": 86100 },
+    "window": { "start": "2026-11-11T00:01:03Z", "end": "2026-11-17T23:56:04Z", "seconds": 604501 },
     "events": [
         {
             "station": "940GZZDLDEV",
@@ -26,7 +26,7 @@
             "station": "HUBCAW",
             "lift": "HUBCAW-Lift-LU 2",
             "t0": 0,
-            "t1": 86100,
+            "t1": 604501,
             "startedBefore": 1,
             "stillOut": 1,
             "breaksRoute": 1,
@@ -36,9 +36,9 @@
             "station": "HUBFPK",
             "lift": "HUBFPK-Lift-3",
             "t0": 0,
-            "t1": 86100,
+            "t1": 503700,
             "startedBefore": 1,
-            "stillOut": 1,
+            "stillOut": 0,
             "breaksRoute": 1,
             "allLost": 0
         },
@@ -46,7 +46,7 @@
             "station": "HUBWBP",
             "lift": "HUBWBP-Lift-3",
             "t0": 0,
-            "t1": 86100,
+            "t1": 604501,
             "startedBefore": 1,
             "stillOut": 1,
             "breaksRoute": 1,
@@ -56,7 +56,7 @@
             "station": "HUBWIJ",
             "lift": "HUBWIJ-Lift-1",
             "t0": 0,
-            "t1": 86100,
+            "t1": 604501,
             "startedBefore": 1,
             "stillOut": 1,
             "breaksRoute": 1,
@@ -66,7 +66,7 @@
             "station": "HUBWMB",
             "lift": "HUBWMB-Lift-3",
             "t0": 0,
-            "t1": 86100,
+            "t1": 604501,
             "startedBefore": 1,
             "stillOut": 1,
             "breaksRoute": 0,
@@ -86,7 +86,7 @@
             "station": "HUBZCW",
             "lift": "HUBZCW-Lift-4",
             "t0": 0,
-            "t1": 86100,
+            "t1": 604501,
             "startedBefore": 1,
             "stillOut": 1,
             "breaksRoute": 1,
@@ -131,6 +131,656 @@
             "stillOut": 0,
             "breaksRoute": 1,
             "allLost": 0
+        },
+        {
+            "station": "940GZZLUFBY",
+            "lift": "940GZZLUFBY-Lift-2",
+            "t0": 95400,
+            "t1": 604501,
+            "startedBefore": 0,
+            "stillOut": 1,
+            "breaksRoute": 1,
+            "allLost": 1
+        },
+        {
+            "station": "940GZZLUNGW",
+            "lift": "940GZZLUNGW-Lift-1",
+            "t0": 102600,
+            "t1": 260100,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "940GZZLUNGW",
+            "lift": "940GZZLUNGW-Lift-2",
+            "t0": 102600,
+            "t1": 261600,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "HUBWSM",
+            "lift": "HUBWSM-Lift-4",
+            "t0": 104400,
+            "t1": 129900,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "HUBCUS",
+            "lift": "HUBCUS-Lift-1",
+            "t0": 106500,
+            "t1": 295500,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 1
+        },
+        {
+            "station": "940GZZLUNBP",
+            "lift": "940GZZLUNBP-Lift-2",
+            "t0": 121200,
+            "t1": 129300,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "HUBHRW",
+            "lift": "HUBHRW-Lift-3",
+            "t0": 125400,
+            "t1": 137100,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 0,
+            "allLost": 0
+        },
+        {
+            "station": "HUBWSM",
+            "lift": "HUBWSM-Lift-4",
+            "t0": 131400,
+            "t1": 132600,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "940GZZLUGGN",
+            "lift": "940GZZLUGGN-Lift-1",
+            "t0": 147900,
+            "t1": 157500,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "940GZZLUGGN",
+            "lift": "940GZZLUGGN-Lift-2",
+            "t0": 147900,
+            "t1": 157500,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "HUBWMB",
+            "lift": "HUBWMB-Lift-4",
+            "t0": 154200,
+            "t1": 373200,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 0,
+            "allLost": 0
+        },
+        {
+            "station": "HUBEAL",
+            "lift": "HUBEAL-Lift-2",
+            "t0": 154500,
+            "t1": 192000,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 0,
+            "allLost": 0
+        },
+        {
+            "station": "HUBLST",
+            "lift": "HUBLST-Lift-1",
+            "t0": 202200,
+            "t1": 604501,
+            "startedBefore": 0,
+            "stillOut": 1,
+            "breaksRoute": 1,
+            "allLost": 1
+        },
+        {
+            "station": "940GZZLUICK",
+            "lift": "940GZZLUICK-Lift-1",
+            "t0": 212700,
+            "t1": 213900,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "940GZZLUICK",
+            "lift": "940GZZLUICK-Lift-2",
+            "t0": 212700,
+            "t1": 213900,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "HUBBHO",
+            "lift": "HUBBHO-Lift-2",
+            "t0": 214800,
+            "t1": 390000,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 0,
+            "allLost": 0
+        },
+        {
+            "station": "940GZZLUWYP",
+            "lift": "940GZZLUWYP-Lift-2",
+            "t0": 223500,
+            "t1": 235500,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "HUBWSM",
+            "lift": "HUBWSM-Lift-2",
+            "t0": 230400,
+            "t1": 273900,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 1
+        },
+        {
+            "station": "HUBWEH",
+            "lift": "HUBWEH-Lift-4",
+            "t0": 234000,
+            "t1": 247200,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "940GZZLUEGW",
+            "lift": "940GZZLUEGW-Lift-1",
+            "t0": 238200,
+            "t1": 247200,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "940GZZLUEGW",
+            "lift": "940GZZLUEGW-Lift-2",
+            "t0": 238200,
+            "t1": 247200,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "HUBBDS",
+            "lift": "HUBBDS-Lift-1",
+            "t0": 257100,
+            "t1": 262500,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 0,
+            "allLost": 0
+        },
+        {
+            "station": "HUBBDS",
+            "lift": "HUBBDS-Lift-4",
+            "t0": 257100,
+            "t1": 262500,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 0,
+            "allLost": 0
+        },
+        {
+            "station": "940GZZLUMHL",
+            "lift": "940GZZLUMHL-Lift-1",
+            "t0": 264000,
+            "t1": 285300,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 1
+        },
+        {
+            "station": "HUBWSM",
+            "lift": "HUBWSM-Lift-2",
+            "t0": 278100,
+            "t1": 297600,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 1
+        },
+        {
+            "station": "940GZZLUFYC",
+            "lift": "940GZZLUFYC-Lift-1",
+            "t0": 289200,
+            "t1": 373200,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "940GZZLUFYC",
+            "lift": "940GZZLUFYC-Lift-2",
+            "t0": 289200,
+            "t1": 373200,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "HUBBKG",
+            "lift": "HUBBKG-Lift-1",
+            "t0": 297300,
+            "t1": 312600,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 1
+        },
+        {
+            "station": "940GZZLUPNR",
+            "lift": "940GZZLUPNR-Lift-1",
+            "t0": 302100,
+            "t1": 310500,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "940GZZLUPNR",
+            "lift": "940GZZLUPNR-Lift-2",
+            "t0": 302100,
+            "t1": 310500,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "HUBWSM",
+            "lift": "HUBWSM-Lift-2",
+            "t0": 315900,
+            "t1": 331200,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 1
+        },
+        {
+            "station": "HUBHRW",
+            "lift": "HUBHRW-Lift-3",
+            "t0": 323100,
+            "t1": 604501,
+            "startedBefore": 0,
+            "stillOut": 1,
+            "breaksRoute": 0,
+            "allLost": 0
+        },
+        {
+            "station": "940GZZLUKBN",
+            "lift": "940GZZLUKBN-Lift-1",
+            "t0": 330000,
+            "t1": 373200,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 1
+        },
+        {
+            "station": "940GZZLUNGW",
+            "lift": "940GZZLUNGW-Lift-2",
+            "t0": 370500,
+            "t1": 396000,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "940GZZLUDBN",
+            "lift": "940GZZLUDBN-Lift-1",
+            "t0": 370800,
+            "t1": 374100,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "940GZZLUDBN",
+            "lift": "940GZZLUDBN-Lift-2",
+            "t0": 370800,
+            "t1": 374100,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "940GZZLUWYP",
+            "lift": "940GZZLUWYP-Lift-2",
+            "t0": 376800,
+            "t1": 393600,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "940GZZLUACT",
+            "lift": "940GZZLUACT-Lift-1",
+            "t0": 392100,
+            "t1": 403800,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "940GZZLUICK",
+            "lift": "940GZZLUICK-Lift-1",
+            "t0": 397800,
+            "t1": 405900,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "940GZZLUICK",
+            "lift": "940GZZLUICK-Lift-2",
+            "t0": 397800,
+            "t1": 405900,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "940GZZLUNBP",
+            "lift": "940GZZLUNBP-Lift-2",
+            "t0": 410100,
+            "t1": 418500,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "940GZZLUKBN",
+            "lift": "940GZZLUKBN-Lift-1",
+            "t0": 432300,
+            "t1": 604501,
+            "startedBefore": 0,
+            "stillOut": 1,
+            "breaksRoute": 1,
+            "allLost": 1
+        },
+        {
+            "station": "HUBWEH",
+            "lift": "HUBWEH-Lift-1",
+            "t0": 451200,
+            "t1": 456000,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "HUBWEH",
+            "lift": "HUBWEH-Lift-2",
+            "t0": 451200,
+            "t1": 456000,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "HUBWEH",
+            "lift": "HUBWEH-Lift-4",
+            "t0": 451200,
+            "t1": 456000,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "HUBWEH",
+            "lift": "HUBWEH-Lift-5",
+            "t0": 451200,
+            "t1": 456000,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "HUBWEH",
+            "lift": "HUBWEH-Lift-6",
+            "t0": 451200,
+            "t1": 456000,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 0,
+            "allLost": 0
+        },
+        {
+            "station": "HUBBDS",
+            "lift": "HUBBDS-Lift-1",
+            "t0": 451500,
+            "t1": 452100,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 0,
+            "allLost": 0
+        },
+        {
+            "station": "HUBBDS",
+            "lift": "HUBBDS-Lift-4",
+            "t0": 451500,
+            "t1": 452100,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 0,
+            "allLost": 0
+        },
+        {
+            "station": "940GZZLUSUH",
+            "lift": "940GZZLUSUH-Lift-1",
+            "t0": 457200,
+            "t1": 459300,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "940GZZLUSUH",
+            "lift": "940GZZLUSUH-Lift-2",
+            "t0": 457200,
+            "t1": 459300,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "940GZZLUNBP",
+            "lift": "940GZZLUNBP-Lift-2",
+            "t0": 460800,
+            "t1": 466200,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "940GZZLUWYP",
+            "lift": "940GZZLUWYP-Lift-3",
+            "t0": 464700,
+            "t1": 492900,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "HUBBHO",
+            "lift": "HUBBHO-Lift-2",
+            "t0": 474000,
+            "t1": 474900,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 0,
+            "allLost": 0
+        },
+        {
+            "station": "940GZZLUWIP",
+            "lift": "940GZZLUWIP-Lift-1",
+            "t0": 477600,
+            "t1": 502200,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 1
+        },
+        {
+            "station": "HUBBHO",
+            "lift": "HUBBHO-Lift-2",
+            "t0": 483900,
+            "t1": 490500,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 0,
+            "allLost": 0
+        },
+        {
+            "station": "HUBFPK",
+            "lift": "HUBFPK-Lift-1",
+            "t0": 486600,
+            "t1": 487500,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 0
+        },
+        {
+            "station": "HUBZCW",
+            "lift": "HUBZCW-Lift-1",
+            "t0": 498300,
+            "t1": 542700,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 1
+        },
+        {
+            "station": "HUBBDS",
+            "lift": "HUBBDS-Lift-4",
+            "t0": 538500,
+            "t1": 541800,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 0,
+            "allLost": 0
+        },
+        {
+            "station": "940GZZLUWIP",
+            "lift": "940GZZLUWIP-Lift-1",
+            "t0": 541500,
+            "t1": 553800,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 1
+        },
+        {
+            "station": "940GZZDLSHS",
+            "lift": "940GZZDLSHS-Lift-1",
+            "t0": 543000,
+            "t1": 549900,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 0,
+            "allLost": 0
+        },
+        {
+            "station": "HUBBKG",
+            "lift": "HUBBKG-Lift-1",
+            "t0": 554700,
+            "t1": 604501,
+            "startedBefore": 0,
+            "stillOut": 1,
+            "breaksRoute": 1,
+            "allLost": 1
+        },
+        {
+            "station": "HUBZCW",
+            "lift": "HUBZCW-Lift-1",
+            "t0": 578100,
+            "t1": 583800,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 1,
+            "allLost": 1
+        },
+        {
+            "station": "HUBLHS",
+            "lift": "HUBLHS-Lift-3",
+            "t0": 584100,
+            "t1": 590700,
+            "startedBefore": 0,
+            "stillOut": 0,
+            "breaksRoute": 0,
+            "allLost": 0
+        },
+        {
+            "station": "HUBZCW",
+            "lift": "HUBZCW-Lift-1",
+            "t0": 595200,
+            "t1": 604501,
+            "startedBefore": 0,
+            "stillOut": 1,
+            "breaksRoute": 1,
+            "allLost": 1
         }
     ]
 }

@@ -65,5 +65,5 @@ Lift history is collected separately and continuously by `collect_lifts.py`
 - Distances to the nearest step-free station are straight lines, not routes, and only
   count Tube/DLR stations as alternatives.
 - Partial stations count as step-free in the headline, so the headline share is a lower bound.
-- The 3–8 Nov laptop collection has large gaps (see the `coverage` finding); the replay
-  uses the continuous VM data instead.
+- The lift feed is a 5-minute poll: outages shorter than that can be missed. The current
+  data (11–17 Nov 2026) has no failed polls and no gaps, so the replay window is the whole week.

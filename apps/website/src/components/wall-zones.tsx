@@ -378,7 +378,9 @@ function ZoneC({
     const replaying = scene === 'replay';
 
     const names = new Map(stations.map((s) => [s.id, s.name]));
-    const rows = groupByStation(events, names).slice(0, C_ROWS_PER_SCREEN * 3);
+    // A week has more stations with outages than fit on the wall: show the ones hit hardest.
+    const allRows = groupByStation(events, names);
+    const rows = allRows.slice(0, C_ROWS_PER_SCREEN * 3);
     const screenRows = [0, 1, 2].map((i) =>
         rows.slice(i * C_ROWS_PER_SCREEN, (i + 1) * C_ROWS_PER_SCREEN)
     );
@@ -387,8 +389,12 @@ function ZoneC({
     const longest = n.replayImpact;
     const longestText =
         longest.longestHours >= windowHours - 0.2
-            ? `${longest.longestStation}'s lift was out all day`
-            : `${longest.longestStation}'s lift was out for ${longest.longestHours} hours`;
+            ? `${longest.longestStation}'s lift, out all week`
+            : `${longest.longestStation}'s lift, out for ${longest.longestHours} hours`;
+    const shownText =
+        rows.length < allRows.length
+            ? ` · the ${rows.length} of ${allRows.length} stations hit hardest`
+            : '';
 
     return (
         <>
@@ -397,16 +403,18 @@ function ZoneC({
                     Does it work?
                 </Text>
                 <Text size={TEXT.insight} color={LIGHT} style={{ marginTop: sh(0.015) }}>
-                    One day of lift outages, replayed in 60 s · recorded, not live
+                    One week of lift outages, replayed in 60 s · recorded, not live
                 </Text>
                 <Text size={TEXT.reference * 1.15} color={GREY} style={{ marginTop: sh(0.01) }}>
-                    {formatDay(window)} · {n.replay.outages} outages at {n.replay.stations} stations
-                    · {n.replay.stationsLostAll} stations lost all step-free access
+                    {formatDateRange(window.start, window.end)} · {n.replay.outages} outages at{' '}
+                    {n.replay.stations} stations · {n.replay.stationsLostAll} stations lost all
+                    step-free access
                 </Text>
                 <Text size={TEXT.reference * 1.15} color={LIGHT} style={{ marginTop: sh(0.01) }}>
-                    Longest: {longestText}.
+                    Longest: {longestText}
+                    {shownText}
                 </Text>
-                {/* Axis: what the bars mean (left) and the hours of the day (right). */}
+                {/* Axis: what the bars mean (left) and the days of the week (right). */}
                 <div className="flex" style={{ gap: sw(C_GAP), marginTop: 'auto' }}>
                     <div
                         className="flex flex-col justify-end"
@@ -470,7 +478,7 @@ function BarKey({ color, children }: { color: string; children: ReactNode }) {
     );
 }
 
-/** Hour ticks along the bar track, with the replay clock riding on the playhead. */
+/** Day ticks (UTC midnights) along the bar track, with the replay clock riding on the playhead. */
 function TimeAxis({
     window,
     played,
@@ -481,13 +489,17 @@ function TimeAxis({
     replaying: boolean;
 }) {
     const startSod = secondsOfDay(window.start);
-    // Ticks every 6 h of the clock that fall inside the window.
-    const ticks = [0, 6, 12, 18, 24]
-        .map((h) => ({ h, x: (h * 3600 - startSod) / window.seconds }))
-        .filter(({ x }) => x >= 0 && x <= 1);
+    const startDay = Date.parse(window.start.slice(0, 10) + 'T00:00:00Z');
+    // One tick at the start of each day; its label sits under the middle of that day.
+    const days = Math.ceil((startSod + window.seconds) / 86400);
+    const ticks = Array.from({ length: days }, (_, d) => ({
+        d,
+        x: (d * 86400 - startSod) / window.seconds,
+        mid: ((d + 0.5) * 86400 - startSod) / window.seconds
+    })).filter(({ mid }) => mid >= 0 && mid <= 1);
     return (
         <div className="relative flex-1" style={{ height: sh(0.24) }}>
-            {/* The clock, centred on the playhead (clamped so it never leaves the track). */}
+            {/* The clock rides on the playhead and stays inside the track. */}
             <Text
                 size={TEXT.small}
                 bold
@@ -495,8 +507,10 @@ function TimeAxis({
                 style={{
                     position: 'absolute',
                     top: 0,
-                    left: `${Math.min(95, Math.max(5, played * 100))}%`,
-                    transform: 'translateX(-50%)',
+                    left: `${played * 100}%`,
+                    // Slide the anchor from the label's left edge to its right edge as the
+                    // playhead crosses the track, so the label never leaves the track.
+                    transform: `translateX(${-played * 100}%)`,
                     whiteSpace: 'nowrap',
                     opacity: replaying ? 1 : 0,
                     transition: FADE,
@@ -513,35 +527,35 @@ function TimeAxis({
                     background: 'rgba(255, 255, 255, 0.35)'
                 }}
             />
-            {ticks.map(({ h, x }) => (
-                <div
-                    key={h}
-                    className="absolute flex flex-col items-center"
-                    style={{ left: `${x * 100}%`, bottom: 0, transform: 'translateX(-50%)' }}
-                >
-                    <span
-                        style={{
-                            width: sh(0.004),
-                            height: sh(0.02),
-                            background: 'rgba(255, 255, 255, 0.35)'
-                        }}
-                    />
+            {ticks.map(({ d, x, mid }) => (
+                <div key={d}>
+                    {x >= 0 ? (
+                        <span
+                            className="absolute"
+                            style={{
+                                left: `${x * 100}%`,
+                                bottom: sh(0.065),
+                                width: sh(0.004),
+                                height: sh(0.04),
+                                background: 'rgba(255, 255, 255, 0.35)'
+                            }}
+                        />
+                    ) : null}
                     <Text
                         size={TEXT.reference}
                         color={GREY}
-                        style={{ fontVariantNumeric: 'tabular-nums' }}
+                        style={{
+                            position: 'absolute',
+                            left: `${mid * 100}%`,
+                            bottom: 0,
+                            transform: 'translateX(-50%)',
+                            whiteSpace: 'nowrap'
+                        }}
                     >
-                        {String(h % 24).padStart(2, '0')}:00
+                        {formatWeekday(startDay + d * 86400_000)}
                     </Text>
                 </div>
             ))}
-            <Text
-                size={TEXT.reference}
-                color={GREY}
-                style={{ position: 'absolute', right: 0, bottom: 0, whiteSpace: 'nowrap' }}
-            >
-                time of day, UTC →
-            </Text>
         </div>
     );
 }
@@ -595,8 +609,13 @@ function OutageRow({
     );
 }
 
-/** One row per station, ordered by when its first outage starts. */
+/**
+ * One row per station, hardest hit first: most hours with the only step-free route broken,
+ * then most hours with any lift out, then by name.
+ */
 function groupByStation(events: LiftEvent[], names: Map<string, string>): StationRow[] {
+    const hours = (evs: LiftEvent[], onlyBreaking: boolean) =>
+        evs.reduce((sum, e) => sum + (!onlyBreaking || e.breaksRoute ? e.t1 - e.t0 : 0), 0);
     const byStation = new Map<string, LiftEvent[]>();
     for (const e of events) {
         if (!names.has(e.station)) continue; // outside the map's scope
@@ -606,7 +625,8 @@ function groupByStation(events: LiftEvent[], names: Map<string, string>): Statio
         .map(([id, evs]) => ({ id, name: names.get(id) ?? id, events: evs }))
         .sort(
             (a, b) =>
-                Math.min(...a.events.map((e) => e.t0)) - Math.min(...b.events.map((e) => e.t0)) ||
+                hours(b.events, true) - hours(a.events, true) ||
+                hours(b.events, false) - hours(a.events, false) ||
                 a.name.localeCompare(b.name)
         );
 }
@@ -649,8 +669,8 @@ function ZoneD({
                 </Text>
                 {window ? (
                     <Text size={TEXT.insight} color={GREY} style={{ marginTop: sh(0.06) }}>
-                        On {formatDay(window)} that happened at {n.replay.stationsLostAll} stations,
-                        for part or all of the day.
+                        During {formatDateRange(window.start, window.end)} that happened at{' '}
+                        {n.replay.stationsLostAll} stations.
                     </Text>
                 ) : null}
             </Row>
@@ -677,13 +697,23 @@ function ZoneD({
                 <Text size={TEXT.reference} color={GREY} style={{ marginTop: sh(0.02) }}>
                     Not live: the wall replays recorded data. Journeys = station entries. Step-free
                     = street to platform by lift, ramp or level path; a station step-free to some
-                    platforms counts as step-free, so {n.pctNoStepFree}% is a lower bound. The lift
-                    feed is incomplete: observed for {Math.round(c.hoursObserved)} of{' '}
-                    {Math.round(c.hoursInWindow)} hours ({c.failedPolls} of{' '}
-                    {c.okPolls + c.failedPolls} polls failed), so outages outside those hours are
-                    missing; the replay is the longest gap-free stretch. Whether a broken lift cuts
-                    a step-free route comes from TfL&apos;s station route data, not from the feed.
-                    The map frames inner London; stations off its edges are still counted.
+                    platforms counts as step-free, so {n.pctNoStepFree}% is a lower bound.{' '}
+                    {c.failedPolls === 0 && c.hoursObserved >= c.hoursInWindow - 0.5 ? (
+                        <>
+                            The lift feed was polled without a gap for {Math.round(c.hoursInWindow)}{' '}
+                            hours ({c.okPolls} polls); outages shorter than 5 min can be missed.
+                        </>
+                    ) : (
+                        <>
+                            The lift feed is incomplete: observed for {Math.round(c.hoursObserved)}{' '}
+                            of {Math.round(c.hoursInWindow)} hours ({c.failedPolls} of{' '}
+                            {c.okPolls + c.failedPolls} polls failed), so outages outside those
+                            hours are missing; the replay is the longest gap-free stretch.
+                        </>
+                    )}{' '}
+                    Whether a broken lift cuts a step-free route comes from TfL&apos;s station route
+                    data, not from the feed. The map frames inner London; stations off its edges are
+                    still counted.
                 </Text>
             </Row>
         </>
@@ -695,10 +725,12 @@ function ZoneD({
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-/** '2026-11-11T00:01:03Z' -> '11 Nov 2026' */
-function formatDay(w: LiftWindow) {
-    const [y, m, d] = w.start.slice(0, 10).split('-').map(Number);
-    return `${d} ${MONTHS[m - 1]} ${y}`;
+const WEEKDAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+/** UTC midnight in ms -> 'Wed 11 Nov' */
+function formatWeekday(ms: number) {
+    const date = new Date(ms);
+    return `${WEEKDAYS[date.getUTCDay()]} ${date.getUTCDate()} ${MONTHS[date.getUTCMonth()]}`;
 }
 
 /** '2026-10-20T13:56+00:00' -> 'Oct 2026' */
@@ -723,10 +755,13 @@ function secondsOfDay(iso: string) {
     return h * 3600 + min * 60 + s;
 }
 
-/** Clock time (HH:MM, UTC) reached `seconds` into the window. */
+/** Day and clock time ('Thu 12 Nov 14:05 UTC') reached `seconds` into the window. */
 function clockInWindow(w: LiftWindow, seconds: number) {
-    const total = Math.floor(secondsOfDay(w.start) + seconds) % 86400;
-    const hh = String(Math.floor(total / 3600)).padStart(2, '0');
-    const mm = String(Math.floor((total % 3600) / 60)).padStart(2, '0');
-    return `${hh}:${mm}`;
+    const startDay = Date.parse(w.start.slice(0, 10) + 'T00:00:00Z');
+    const total = Math.floor(secondsOfDay(w.start) + seconds);
+    const day = Math.floor(total / 86400);
+    const sod = total % 86400;
+    const hh = String(Math.floor(sod / 3600)).padStart(2, '0');
+    const mm = String(Math.floor((sod % 3600) / 60)).padStart(2, '0');
+    return `${formatWeekday(startDay + day * 86400_000)} ${hh}:${mm} UTC`;
 }

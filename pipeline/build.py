@@ -492,7 +492,7 @@ FINDINGS = [
                   arg_min(nearest_name, km) as nearest_step_free,
                   round(min(km), 1) as km
            from pairs group by id, name, annual_entries
-           order by km desc limit 10""",
+           order by min(km) desc, name limit 10""",
     ),
     (
         "busiest_step_free",

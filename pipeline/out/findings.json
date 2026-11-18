@@ -180,14 +180,14 @@
                     "km": 2.9
                 },
                 {
-                    "id": "940GZZLUBZP",
-                    "name": "Belsize Park",
-                    "annual_entries": 2542289,
-                    "nearest_step_free": "Kilburn",
+                    "id": "940GZZLULYS",
+                    "name": "Leytonstone",
+                    "annual_entries": 3301901,
+                    "nearest_step_free": "Stratford International DLR",
                     "km": 2.8
                 }
             ],
-            "sql": "with pairs as (\n       select a.id, a.name, a.annual_entries, b.name as nearest_name,\n              2 * 6371 * asin(sqrt(\npow(sin(radians(b.lat - a.lat) / 2), 2)\n+ cos(radians(a.lat)) * cos(radians(b.lat)) * pow(sin(radians(b.lon - a.lon) / 2), 2))) as km\n       from stations a join stations b on b.step_free = 'full'\n       where a.step_free = 'none')\n   select id, name, annual_entries,\n          arg_min(nearest_name, km) as nearest_step_free,\n          round(min(km), 1) as km\n   from pairs group by id, name, annual_entries\n   order by km desc limit 10"
+            "sql": "with pairs as (\n       select a.id, a.name, a.annual_entries, b.name as nearest_name,\n              2 * 6371 * asin(sqrt(\npow(sin(radians(b.lat - a.lat) / 2), 2)\n+ cos(radians(a.lat)) * cos(radians(b.lat)) * pow(sin(radians(b.lon - a.lon) / 2), 2))) as km\n       from stations a join stations b on b.step_free = 'full'\n       where a.step_free = 'none')\n   select id, name, annual_entries,\n          arg_min(nearest_name, km) as nearest_step_free,\n          round(min(km), 1) as km\n   from pairs group by id, name, annual_entries\n   order by min(km) desc, name limit 10"
         },
         "busiest_step_free": {
             "description": "Insight / zone B: the 5 busiest stations that are step-free to every platform (the other side of finding 2a).",
@@ -232,23 +232,23 @@
         "lift_window": {
             "description": "Finding 3b / zone C: the lift-outage collection window and how much of it was observed.",
             "result": {
-                "first_poll": "2026-11-03T17:58:31Z",
-                "last_poll": "2026-11-11T23:56:03Z",
-                "ok_polls": 699,
-                "failed_polls": 42,
-                "hours_observed": 57.199999999999996,
-                "hours_in_window": 198.0
+                "first_poll": "2026-11-11T00:01:03Z",
+                "last_poll": "2026-11-17T23:56:04Z",
+                "ok_polls": 2016,
+                "failed_polls": 0,
+                "hours_observed": 167.9,
+                "hours_in_window": 167.9
             },
             "sql": "with w as (\n    select min(polled_at) filter (where ok) as first_at,\n           max(polled_at) filter (where ok) as last_at,\n           count(*) filter (where ok) as ok_polls,\n           count(*) filter (where not ok) as failed_polls\n    from polls)\nselect strftime(timezone('UTC', first_at), '%Y-%m-%dT%H:%M:%SZ') as first_poll,\n       strftime(timezone('UTC', last_at), '%Y-%m-%dT%H:%M:%SZ') as last_poll,\n       ok_polls, failed_polls,\n       (select sum(hours_observed) from coverage) as hours_observed,\n       round(epoch(last_at - first_at) / 3600, 1) as hours_in_window\nfrom w"
         },
         "outages_in_scope": {
             "description": "Finding 3c / zone C: lift outages seen at Tube/DLR stations in the window, and how many broke a step-free route (the lift was the only step-free way to some platform).",
             "result": {
-                "outages": 51,
-                "stations": 33,
-                "outages_breaking_route": 31,
-                "stations_route_broken": 23,
-                "outages_with_gap": 37
+                "outages": 78,
+                "stations": 36,
+                "outages_breaking_route": 61,
+                "stations_route_broken": 29,
+                "outages_with_gap": 0
             },
             "sql": "with o as (\n    select distinct o.lift_id, o.start_at, l.demo_id,\n           coalesce(i.platforms_lost, 0) > 0 as broke_route, o.has_gap\n    from lift_outages o\n    join lifts using (lift_id)\n    join station_lookup l using (station_id)\n    left join lift_impact i using (lift_id))\nselect count(*) as outages,\n       count(distinct demo_id) as stations,\n       count(*) filter (where broke_route) as outages_breaking_route,\n       count(distinct demo_id) filter (where broke_route) as stations_route_broken,\n       count(*) filter (where has_gap) as outages_with_gap\nfrom o"
         },
@@ -256,23 +256,23 @@
             "description": "Zone C: the replayed window (longest stretch with no collection gap over 15 min) and the lift outages at Tube/DLR stations inside it. This is what lift-events.json holds.",
             "result": {
                 "window_start": "2026-11-11T00:01:03Z",
-                "window_end": "2026-11-11T23:56:03Z",
-                "window_hours": 23.9,
-                "outages": 13,
-                "stations": 12,
-                "outages_breaking_route": 11,
-                "stations_route_broken": 10,
-                "stations_lost_all_step_free": 4
+                "window_end": "2026-11-17T23:56:04Z",
+                "window_hours": 167.9,
+                "outages": 78,
+                "stations": 36,
+                "outages_breaking_route": 61,
+                "stations_route_broken": 29,
+                "stations_lost_all_step_free": 12
             },
             "sql": "select (select strftime(timezone('UTC', start_at), '%Y-%m-%dT%H:%M:%SZ') from replay_window) as window_start,\n       (select strftime(timezone('UTC', end_at), '%Y-%m-%dT%H:%M:%SZ') from replay_window) as window_end,\n       (select round(epoch(end_at - start_at) / 3600, 1) from replay_window) as window_hours,\n       count(*) as outages,\n       count(distinct station) as stations,\n       count(*) filter (where breaks_route) as outages_breaking_route,\n       count(distinct station) filter (where breaks_route) as stations_route_broken,\n       count(distinct station) filter (where all_lost) as stations_lost_all_step_free\nfrom replay_events"
         },
         "replay_impact": {
             "description": "Insight / zone C: inside the replayed window, how many hours of broken step-free routes the outages add up to (summed over lifts), how many outages lasted the whole window, and the longest single outage that broke a route.",
             "result": {
-                "route_broken_hours": 149.1,
-                "outages_whole_window": 6,
+                "route_broken_hours": 1485.8,
+                "outages_whole_window": 5,
                 "longest_station": "Canary Wharf",
-                "longest_hours": 23.9
+                "longest_hours": 167.9
             },
             "sql": "select round(sum(e.t1 - e.t0) filter (where e.breaks_route) / 3600.0, 1) as route_broken_hours,\n       count(*) filter (where e.started_before and e.still_out) as outages_whole_window,\n       arg_max(s.display_name, e.t1 - e.t0) filter (where e.breaks_route) as longest_station,\n       round(max(e.t1 - e.t0) filter (where e.breaks_route) / 3600.0, 1) as longest_hours\nfrom replay_events e join stations s on s.id = e.station"
         },
@@ -280,60 +280,53 @@
             "description": "Method note: lift polls per UTC day, failed polls, gaps over 15 min, hours observed.",
             "result": [
                 {
-                    "day": "2026-11-03",
-                    "polls": 44,
-                    "failed_polls": 0,
-                    "gaps_over_15_min": 0,
-                    "hours_observed": 3.5
-                },
-                {
-                    "day": "2026-11-04",
-                    "polls": 65,
-                    "failed_polls": 13,
-                    "gaps_over_15_min": 8,
-                    "hours_observed": 4.1
-                },
-                {
-                    "day": "2026-11-05",
-                    "polls": 77,
-                    "failed_polls": 29,
-                    "gaps_over_15_min": 9,
-                    "hours_observed": 4.3
-                },
-                {
-                    "day": "2026-11-06",
-                    "polls": 33,
-                    "failed_polls": 0,
-                    "gaps_over_15_min": 5,
-                    "hours_observed": 2.3
-                },
-                {
-                    "day": "2026-11-07",
-                    "polls": 43,
-                    "failed_polls": 0,
-                    "gaps_over_15_min": 3,
-                    "hours_observed": 3.3
-                },
-                {
-                    "day": "2026-11-08",
-                    "polls": 1,
-                    "failed_polls": 0,
-                    "gaps_over_15_min": 1,
-                    "hours_observed": 0.0
-                },
-                {
-                    "day": "2026-11-10",
-                    "polls": 190,
-                    "failed_polls": 0,
-                    "gaps_over_15_min": 1,
-                    "hours_observed": 15.8
-                },
-                {
                     "day": "2026-11-11",
                     "polls": 288,
                     "failed_polls": 0,
-                    "gaps_over_15_min": 1,
+                    "gaps_over_15_min": 0,
                     "hours_observed": 23.9
+                },
+                {
+                    "day": "2026-11-12",
+                    "polls": 288,
+                    "failed_polls": 0,
+                    "gaps_over_15_min": 0,
+                    "hours_observed": 24.0
+                },
+                {
+                    "day": "2026-11-13",
+                    "polls": 288,
+                    "failed_polls": 0,
+                    "gaps_over_15_min": 0,
+                    "hours_observed": 24.0
+                },
+                {
+                    "day": "2026-11-14",
+                    "polls": 288,
+                    "failed_polls": 0,
+                    "gaps_over_15_min": 0,
+                    "hours_observed": 24.0
+                },
+                {
+                    "day": "2026-11-15",
+                    "polls": 288,
+                    "failed_polls": 0,
+                    "gaps_over_15_min": 0,
+                    "hours_observed": 24.0
+                },
+                {
+                    "day": "2026-11-16",
+                    "polls": 288,
+                    "failed_polls": 0,
+                    "gaps_over_15_min": 0,
+                    "hours_observed": 24.0
+                },
+                {
+                    "day": "2026-11-17",
+                    "polls": 288,
+                    "failed_polls": 0,
+                    "gaps_over_15_min": 0,
+                    "hours_observed": 24.0
                 }
             ],
             "sql": "select strftime(day, '%Y-%m-%d') as day, polls, failed_polls, gaps_over_15_min, hours_observed\nfrom coverage order by day"
